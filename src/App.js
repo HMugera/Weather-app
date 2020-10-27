@@ -21,7 +21,7 @@ function App() {
       );
 
       const response = await weather.json();
-      console.log(response);
+      // console.log(response);
       let weatherData = {
         location: response.name,
         temp_max: response.main.temp_max,
@@ -29,9 +29,11 @@ function App() {
         description: response.weather[0].main,
         country: response.sys.country,
         wind_speed: response.wind.speed,
+        icon:response.weather[0].icon
       };
       setWeather(weatherData);
       setLoading(false);
+     
     };
 
     fetchFromApi();
@@ -56,8 +58,11 @@ function App() {
         description: response.weather[0].main,
         country: response.sys.country,
         wind_speed: response.wind.speed,
+        icon:response.weather[0].icon
+    
       };
       setWeather(weatherData);
+     
     };
     getWeather();
   };
@@ -77,6 +82,7 @@ function App() {
                 <Info />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>
+              <h1 className="main-title">Previous</h1>
               <Previous isPrevious={isPrevious} setPrevious={setPrevious} />
             </div>
                   </>

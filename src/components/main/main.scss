@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2em;
+  grid-gap: 5em;
   display: flex;
   padding: 40px 0;
 }
@@ -27,14 +27,12 @@
   --border: solid 0.25em var(--clr-accent);
   border-left: var(--border);
   border-right: var(--border);
-  padding: 0 2em;
+  padding: 0 3em;
 }
 
 .Icon {
-  margin: 20px 20px 50px 20px;
-  --size: 8rem;
+  // margin: 20px;
+  --size: 9rem;
   width: var(--size);
   height: var(--size);
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
+ }

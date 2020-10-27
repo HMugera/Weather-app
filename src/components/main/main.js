@@ -17,8 +17,8 @@ function Main({data,isMetric}) {
       </div>
       <div className="temp">
         <h2 className="section-title">Temperature</h2>
-        <p className="reading">
-          High:
+      <p className="reading">  High:
+     
    <span>{formatTemperature(data.temp_max,isMetric)}</span>°<span>{isMetric ? 'C':'F'}</span>
         </p>
         <p className="reading">
@@ -33,7 +33,8 @@ function Main({data,isMetric}) {
         </p>
       </div>
       <div className="Icon">
-        <div className="icon"></div>
+    <img src= {`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+     alt="hm"/>
       </div>
     </div>
   );

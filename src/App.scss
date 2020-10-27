@@ -9,12 +9,12 @@
   --fw-normal: 400;
   --fw-semi: 500;
   --fw-bold: 700;
-  --fs-h1: 1.5rem;
+  --fs-h1: 1.8rem;
   --fs-h2: 2.25rem;
   --fs-body: 1rem;
   --fs-xl: 3.8rem;
   --clr-light: #fff;
-  --clr-gray: #989898;
+  --clr-gray: #e2e0e0;
   --clr-dark: #444;
   --clr-accent: #d35d5d;
   --clr-accent-dark: #613131;
@@ -58,11 +58,11 @@ a:hover {
   color: var(--clr-accent-dark);
 }
 .loader {
-  border: 10px solid var(); /* Light grey */
-  border-top: 12px solid var(--clr-accent); /* Blue */
+  border: 10px solid var();
+  border-top: 12px solid var(--clr-light);
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   animation: spin 1s linear infinite;
 }
 
