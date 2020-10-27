@@ -1,0 +1,114 @@
+.previous-weather {
+    // background: var(--clr-light);
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--clr-dark);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(60%);
+    transition: transform 350ms ease;
+    // padding: 1em 4em 9em 3em;
+    padding: 1rem;
+}
+
+.weather-toggle {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    // background: var(--clr-light);
+    left: 50%;
+    width: 10rem;
+    transform: translate(-50%, calc(-100% - 1rem));
+    text-align: center;
+    font-size: var(--fs-h2);
+    line-height: 1;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    cursor: pointer;
+    color: var(--clr-gray);
+    border: 0;
+    font-family: inherit;
+
+    &:hover,
+    &:focus {
+        color: var(--clr-light);
+    }
+
+    span {
+        display: block;
+        transform: rotate(0);
+        transition: transform 300ms ease;
+    }
+}
+
+.show-weather.previous-weather {
+    transform: translateY(0);
+
+    .weather-toggle span {
+        display: block;
+        transform: rotate(180deg) translateY(-6px);
+    }
+
+    .previous-weather-title,
+    .previous-day {
+        animation: slideUpIn 780ms forwards;
+    }
+
+    .previous-weather-title {
+        text-align: left;
+    }
+
+    .previous-day:nth-child(1) { animation-delay: 100ms}
+    .previous-day:nth-child(2) { animation-delay: 125ms}
+    .previous-day:nth-child(3) { animation-delay: 150ms}
+    .previous-day:nth-child(4) { animation-delay: 175ms}
+    .previous-day:nth-child(5) { animation-delay: 200ms}
+    .previous-day:nth-child(6) { animation-delay: 225ms}
+    .previous-day:nth-child(7) { animation-delay: 300ms}
+}
+.previous-days {
+    display: flex;
+    //  justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.previous-weather-title {
+    text-align: center;
+}
+
+.previous-day {
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    padding-right: 30px;
+    & > * {margin: 0;}
+    padding-bottom: 0;
+}
+.previous-day .Icon{
+    width: 80px;
+    height: 80px;
+    background-color:blue ;
+    padding: 20px;
+}
+.day-title{
+    padding: 10px;
+    color: var(--clr-light);
+}
+
+.day-weather{
+    padding-top: 10px;
+    color: var(--clr-light);
+}
+
+@keyframes slideUpIn {
+    0% { 
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

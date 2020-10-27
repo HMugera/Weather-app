@@ -1,26 +1,104 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.scss";
+import { formatDate } from "./helpers";
+import Search from "./components/search/search";
+import Main from "./components/main/main";
+import Nav from "./components/nav/nav";
+import Info from "./components/Info/info";
+import Unit from "./components/Unit/Unit";
+import Previous from "./components/Previous/Previous";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [weather, setWeather] = useState([]);
+  const [isMetric, setMetric] = useState(false);
+  const [isPrevious, setPrevious] = useState(false);
+  const [city, setCity] = useState("");
+
+  useEffect(() => {
+    const fetchFromApi = async () => {
+      const weather = await fetch(
+        "http://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=imperial&appid=ee79003171a6dfab7b9d6cb88c078a4f"
+      );
+
+      const response = await weather.json();
+      console.log(response);
+      let weatherData = {
+        location: response.name,
+        temp_max: response.main.temp_max,
+        temp_min: response.main.temp_min,
+        description: response.weather[0].main,
+        country: response.sys.country,
+        wind_speed: response.wind.speed,
+      };
+      setWeather(weatherData);
+      setLoading(false);
+    };
+
+    fetchFromApi();
+  }, []);
+
+  const change = (value) => {
+    setCity(value);
+  };
+
+  const changeWather = (event) => {
+    event.preventDefault();
+    let getWeather = async () => {
+      const api_call = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=ee79003171a6dfab7b9d6cb88c078a4f`
+      );
+      const response = await api_call.json();
+      console.log(response);
+      let weatherData = {
+        location: response.name,
+        temp_max: response.main.temp_max,
+        temp_min: response.main.temp_min,
+        description: response.weather[0].main,
+        country: response.sys.country,
+        wind_speed: response.wind.speed,
+      };
+      setWeather(weatherData);
+    };
+    getWeather();
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+
+      <div className="appWrapper">
+        {loading ? (
+          <div className="loader"></div>
+        ) : (
+          <>
+            <div className="mainWeather">
+              <Search changeWeather={changeWather} changeRegion={change} />
+              <Main isMetric={isMetric} data={weather} />
+              <div className="infoWrapper">
+                <Info />
+                <Unit isMetric={isMetric} setMetric={setMetric} />
+              </div>
+            </div>
+            <Previous isPrevious={isPrevious} setPrevious={setPrevious} />
+          </>
+        )}
+      </div>
     </div>
   );
 }
 
 export default App;
+
+{
+  /* <div className="mainWeather">
+          
+           
+         
+         
+       
+      
+    </div>
+  </div>
+  */
+}

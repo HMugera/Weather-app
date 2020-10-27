@@ -1,0 +1,14 @@
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-bar input {
+  font-size: 20px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--clr-accent);
+}
