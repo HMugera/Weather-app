@@ -3,10 +3,8 @@ import "./info.scss";
 
 const Info = () => (
   <div className="infoWrapper">
-    <p>
-      InSight is taking daily weather measurements (temperature, wind, pressure)
-      on the surface of Mars at Elysium Planitia, a flat, smooth plain near
-      Mars’ equator.
+    <p className="info">
+   Doing what heros best let me save your day.With this cold weather that trenchcoat will definetly keep you warm,
     </p>
   </div>
 );

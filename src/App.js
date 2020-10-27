@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
-import { formatDate } from "./helpers";
 import Search from "./components/search/search";
 import Main from "./components/main/main";
 import Nav from "./components/nav/nav";
@@ -11,7 +10,7 @@ import Previous from "./components/Previous/Previous";
 function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
-  const [isMetric, setMetric] = useState(false);
+  const [isMetric, setMetric] = useState(true);
   const [isPrevious, setPrevious] = useState(false);
   const [city, setCity] = useState("");
 
@@ -66,7 +65,6 @@ function App() {
   return (
     <div className="App">
       <Nav />
-
       <div className="appWrapper">
         {loading ? (
           <div className="loader"></div>
@@ -79,9 +77,9 @@ function App() {
                 <Info />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>
+              <Previous isPrevious={isPrevious} setPrevious={setPrevious} />
             </div>
-            <Previous isPrevious={isPrevious} setPrevious={setPrevious} />
-          </>
+                  </>
         )}
       </div>
     </div>
@@ -90,15 +88,4 @@ function App() {
 
 export default App;
 
-{
-  /* <div className="mainWeather">
-          
-           
-         
-         
-       
-      
-    </div>
-  </div>
-  */
-}
+
