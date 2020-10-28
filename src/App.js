@@ -7,8 +7,10 @@ import Info from "./components/Info/info";
 import Unit from "./components/Unit/Unit";
 import Previous from "./components/Previous/Previous";
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = `http://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=metric&appid=${API_KEY}`;
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
   const [isMetric, setMetric] = useState(true);
   const [isPrevious, setPrevious] = useState(false);
@@ -17,10 +19,7 @@ function App() {
 
   useEffect(() => {
     const fetchFromApi = async () => {
-      const weather = await fetch(
-        "http://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=metric&appid=ee79003171a6dfab7b9d6cb88c078a4f"
-      );
-
+      const weather = await fetch(API_URL);
       const response = await weather.json();
       let weatherData = {
         location: response.name,
@@ -46,11 +45,10 @@ function App() {
     event.preventDefault();
     let getWeather = async () => {
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=ee79003171a6dfab7b9d6cb88c078a4f`
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
       );
-      if(api_call.ok){
+      if (api_call.ok) {
         const response = await api_call.json();
-        console.log(response);
         let weatherData = {
           location: response.name,
           temp_max: response.main.temp_max,
@@ -58,17 +56,14 @@ function App() {
           description: response.weather[0].main,
           country: response.sys.country,
           wind_speed: response.wind.speed,
-          icon:response.weather[0].icon
-      
+          icon: response.weather[0].icon,
         };
         setWeather(weatherData);
-        setError(false)
-      }else{
-        setError(true)
-        return
+        setError(false);
+      } else {
+        setError(true);
+        return;
       }
-      
-     
     };
     getWeather();
   };
