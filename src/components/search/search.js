@@ -1,7 +1,7 @@
 import React from "react";
  import './search.scss'
 
-export default function Search({changeWeather,changeRegion}) {
+export default function Search({changeWeather,changeRegion,ifError}) {
   return (
     <div>
       <div className="search-bar">
@@ -17,7 +17,8 @@ export default function Search({changeWeather,changeRegion}) {
           onChange={(e)=> changeRegion(e.target.value)}
             className="regioninput"
             required
-          />
+          />{ifError?   <h1 className="error">Location not found</h1>: <></>}
+       
         </form>
       </div>
     </div>
