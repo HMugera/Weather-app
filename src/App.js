@@ -69,25 +69,25 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Nav />
-      <div className="appWrapper">
+      <div className='appWrapper'>
         {loading ? (
-          <div className="loader"></div>
+          <div className='loader'></div>
         ) : (
           <>
-            <div className="mainWeather">
+            <div className='mainWeather'>
               <Search
                 changeWeather={changeWeather}
                 changeRegion={change}
                 ifError={ifError}
               />
               <Main isMetric={isMetric} data={weather} />
-              <div className="infoWrapper">
+              <div className='infoWrapper'>
                 <Info />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>
-              <h1 className="main-title">Previous</h1>
+              <h1 className='main-title'>Previous</h1>
               <Previous isPrevious={isPrevious} setPrevious={setPrevious} />
             </div>
           </>

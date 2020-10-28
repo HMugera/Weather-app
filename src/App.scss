@@ -58,11 +58,11 @@ a:hover {
   color: var(--clr-accent-dark);
 }
 .loader {
-  border: 10px solid var();
-  border-top: 12px solid var(--clr-light);
+  border: 12px solid var();
+  border-top: 12px solid var(--clr-dark);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   animation: spin 1s linear infinite;
 }
 
