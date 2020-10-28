@@ -1,56 +1,67 @@
 import React from "react";
 import "./Previous.scss";
 
-function Previous({ isPrevious, setPrevious }) {
+function Previous({ data }) {
   return (
-    <div
-      className={
-        isPrevious ? "previous-weather show-weather" : "previous-weather"
-      }
-    >
-      <button
-        className="weather-toggle"
-        onClick={() => setPrevious((prev) => !prev)}
-      >
-        <span>&#8593;</span>
-        <span className="sr-only">Show previous weather</span>
-      </button>
+    <div>
+      <h1 className='main-title'>Forecast</h1>
 
-      <h2 className="main-title previous-weather-title">Previous 5 days</h2>
-      <div className="previous-days">
-        <div className="previous-day">
-          <div className="previous-day">
-            <h2 className="day-title">Day</h2>
-            <div className="Icon"></div>
-            <h3 className="day-weather">Weather</h3>
+      <div className='previousWrapper'>
+        <div className='previous-days'>
+          <div className='previous-day'>
+            <div className='day'>Day</div>
+            <div className='icon'>
+              {" "}
+              <img
+                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                alt='hm'
+              />
+            </div>
+            <div className='weather'>{data.description}</div>
           </div>
-        </div>
-        <div className="previous-day">
-          <div className="previous-day">
-            <h2 className="day-title">Day</h2>
-            <div className="Icon"></div>
-            <h3 className="day-weather">Weather</h3>
+          <div className='previous-day'>
+            <div className='day'>Day</div>
+            <div className='icon'>
+              {" "}
+              <img
+                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                alt='hm'
+              />
+            </div>
+            <div className='weather'>{data.description}</div>
           </div>
-        </div>
-        <div className="previous-day">
-          <div className="previous-day">
-            <h2 className="day-title">Day</h2>
-            <div className="Icon"></div>
-            <h3 className="day-weather">Weather</h3>
+          <div className='previous-day'>
+            <div className='day'>Day</div>
+            <div className='icon'>
+              {" "}
+              <img
+                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                alt='hm'
+              />
+            </div>
+            <div className='weather'>{data.description}</div>
           </div>
-        </div>
-        <div className="previous-day">
-          <div className="previous-day">
-            <h2 className="day-title">Day</h2>
-            <div className="Icon"></div>
-            <h3 className="day-weather">Weather</h3>
+          <div className='previous-day'>
+            <div className='day'>Day</div>
+            <div className='icon'>
+              {" "}
+              <img
+                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                alt='hm'
+              />
+            </div>
+            <div className='weather'>{data.description}</div>
           </div>
-        </div>
-        <div className="previous-day">
-          <div className="previous-day">
-            <h2 className="day-title">Day</h2>
-            <div className="Icon"></div>
-            <h3 className="day-weather">Weather</h3>
+          <div className='previous-day'>
+            <div className='day'>Day</div>
+            <div className='icon'>
+              {" "}
+              <img
+                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+                alt='hm'
+              />
+            </div>
+            <div className='weather'>{data.description}</div>
           </div>
         </div>
       </div>
