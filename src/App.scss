@@ -29,15 +29,17 @@
   white-space: nowrap;
   width: 1px;
 }
-.App ,body {
+.App,
+body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
-  background:  linear-gradient(
-    rgba(204, 204, 204, 0.6), 
-    rgba(175, 174, 174, 0.6)
-  ), url("./assets//background.jpg");
+  background: linear-gradient(
+      rgba(204, 204, 204, 0.6),
+      rgba(175, 174, 174, 0.6)
+    ),
+    url("./assets//background.jpg");
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -67,15 +69,19 @@ a:hover {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.appWrapper{
+.appWrapper {
   display: flex;
-justify-content: center;
-align-items: center;
-padding: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
 .mainWeather {
@@ -99,11 +105,10 @@ padding: 50px;
   }
 }
 
-.infoWrapper{
-display: grid;
-grid-template-columns: auto auto auto;
-grid-gap: 20px;
-
+.infoWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
 }
 
 .main-title {
@@ -112,5 +117,4 @@ grid-gap: 20px;
 
   color: var(--clr-light);
   letter-spacing: 2px;
-
 }

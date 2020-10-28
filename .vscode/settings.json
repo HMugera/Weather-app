@@ -1,9 +1,7 @@
 {
-    "emmet.excludeLanguages": [
-        "markdown"
-    ],
-    "emmet.includeLanguages": {
-       "javascript": "javascriptreact"
-    },
-    "eslint.trace.server": null
- }
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "eslint.trace.server": null
+}

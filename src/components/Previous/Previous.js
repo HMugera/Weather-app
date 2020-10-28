@@ -1,10 +1,17 @@
 import React from "react";
 import "./Previous.scss";
 
-function Previous({isPrevious,setPrevious}) {
+function Previous({ isPrevious, setPrevious }) {
   return (
-    <div className={isPrevious? "previous-weather show-weather":"previous-weather"}>
-      <button className="weather-toggle"  onClick={() => setPrevious((prev) => !prev)}>
+    <div
+      className={
+        isPrevious ? "previous-weather show-weather" : "previous-weather"
+      }
+    >
+      <button
+        className="weather-toggle"
+        onClick={() => setPrevious((prev) => !prev)}
+      >
         <span>&#8593;</span>
         <span className="sr-only">Show previous weather</span>
       </button>
