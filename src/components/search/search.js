@@ -18,7 +18,7 @@ export default function Search({ changeWeather, changeRegion, ifError }) {
             className="regioninput"
             required
           />
-          {ifError ? <h1 className="error">Location not found!</h1> : <></>}
+          {ifError ? <h2 className="error">Location not found!</h2> : <></>}
         </form>
       </div>
     </div>

@@ -1,67 +1,53 @@
 import React from "react";
 import "./Previous.scss";
 
+import getIcon from "../../getIcon"
 function Previous({ data }) {
   return (
     <div>
-      <h1 className='main-title'>Forecast</h1>
+      <h1 className="main-title">Forecast</h1>
 
-      <div className='previousWrapper'>
-        <div className='previous-days'>
-          <div className='previous-day'>
-            <div className='day'>Day</div>
-            <div className='icon'>
+      <div className="previousWrapper">
+        <div className="previous-days">
+          <div className="previous-day">
+            <div className="day">Day</div>
+            <div className="icon">
               {" "}
-              <img
-                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
-                alt='hm'
-              />
+              {getIcon(data.iconId)}
             </div>
-            <div className='weather'>{data.description}</div>
+            <div className="weather">{data.description}</div>
           </div>
-          <div className='previous-day'>
-            <div className='day'>Day</div>
-            <div className='icon'>
+          <div className="previous-day">
+            <div className="day">Day</div>
+            <div className="icon">
               {" "}
-              <img
-                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
-                alt='hm'
-              />
+              {getIcon(data.iconId)}
             </div>
-            <div className='weather'>{data.description}</div>
+            <div className="weather">{data.description}</div>
           </div>
-          <div className='previous-day'>
-            <div className='day'>Day</div>
-            <div className='icon'>
+          <div className="previous-day">
+            <div className="day">Day</div>
+            <div className="icon">
               {" "}
-              <img
-                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
-                alt='hm'
-              />
+              {getIcon(data.iconId)}
             </div>
-            <div className='weather'>{data.description}</div>
+            <div className="weather">{data.description}</div>
           </div>
-          <div className='previous-day'>
-            <div className='day'>Day</div>
-            <div className='icon'>
+          <div className="previous-day">
+            <div className="day">Day</div>
+            <div className="icon">
               {" "}
-              <img
-                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
-                alt='hm'
-              />
+              {getIcon(data.iconId)}
             </div>
-            <div className='weather'>{data.description}</div>
+            <div className="weather">{data.description}</div>
           </div>
-          <div className='previous-day'>
-            <div className='day'>Day</div>
-            <div className='icon'>
+          <div className="previous-day">
+            <div className="day">Day</div>
+            <div className="icon">
               {" "}
-              <img
-                src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
-                alt='hm'
-              />
+              {getIcon(data.iconId)}
             </div>
-            <div className='weather'>{data.description}</div>
+            <div className="weather">{data.description}</div>
           </div>
         </div>
       </div>

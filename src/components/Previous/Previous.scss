@@ -11,14 +11,16 @@
 //  align-items: center;
 // }
 
-.previous-days{
+.previous-days {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   padding: 40px 30px;
 }
 
-.previous-day{
+.previous-day {
   border-right: 3px solid var(--clr-accent);
-  padding-right: 60px;
+  padding-right: 30px;
 }
+
+  .previous-day:nth-child(5) { border-right:none}

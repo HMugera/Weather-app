@@ -13,7 +13,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
   const [isMetric, setMetric] = useState(true);
-  const [isPrevious, setPrevious] = useState(false);
   const [city, setCity] = useState("");
   const [ifError, setError] = useState(false);
 
@@ -28,7 +27,7 @@ function App() {
         description: response.weather[0].main,
         country: response.sys.country,
         wind_speed: response.wind.speed,
-        icon: response.weather[0].icon,
+        iconId: response.weather[0].id,
       };
       setWeather(weatherData);
       setLoading(false);
@@ -56,7 +55,7 @@ function App() {
           description: response.weather[0].main,
           country: response.sys.country,
           wind_speed: response.wind.speed,
-          icon: response.weather[0].icon,
+          iconId: response.weather[0].id,
         };
         setWeather(weatherData);
         setError(false);
@@ -69,21 +68,21 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       <Nav />
-      <div className='appWrapper'>
+      <div className="appWrapper">
         {loading ? (
-          <div className='loader'></div>
+          <div className="loader"></div>
         ) : (
           <>
-            <div className='mainWeather'>
+            <div className="mainWeather">
               <Search
                 changeWeather={changeWeather}
                 changeRegion={change}
                 ifError={ifError}
               />
               <Main isMetric={isMetric} data={weather} />
-              <div className='infoWrapper'>
+              <div className="infoWrapper">
                 <Info />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>

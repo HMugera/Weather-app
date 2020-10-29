@@ -2,8 +2,9 @@ import React from "react";
 import "./main.scss";
 
 //helpers to help get date and format temperature
-import { formatTemperature } from "../../helpers";
-import { getCurrentDate } from "../../helpers";
+import { formatTemperature,getCurrentDate } from "../../helpers";
+import getIcon from "../../getIcon"
+
 
 function Main({ data, isMetric }) {
   return (
@@ -37,10 +38,7 @@ function Main({ data, isMetric }) {
         </p>
       </div>
       <div className="Icon">
-        <img
-          src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
-          alt="hm"
-        />
+       {getIcon(data.iconId)}
       </div>
     </div>
   );
