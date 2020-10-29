@@ -4,17 +4,17 @@
 }
 
 .search-bar input {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   background: transparent;
+  width: 240px;
   color: #fff;
   border: none;
-  padding-bottom: 10px;
-  border-bottom: 4px solid var(--clr-accent);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--clr-accent);
 }
 
 .error {
   color: var(--clr-accent);
-  font-size:23px;
-
+  font-size: 15px;
 }

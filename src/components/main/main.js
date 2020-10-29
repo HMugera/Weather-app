@@ -2,9 +2,8 @@ import React from "react";
 import "./main.scss";
 
 //helpers to help get date and format temperature
-import { formatTemperature,getCurrentDate } from "../../helpers";
-import getIcon from "../../getIcon"
-
+import { formatTemperature, getCurrentDate } from "../../services/helpers";
+import getIcon from "../../services/getIcon";
 
 function Main({ data, isMetric }) {
   return (
@@ -37,9 +36,7 @@ function Main({ data, isMetric }) {
           {/* <span>{isMetric ? 'kph':'mph'}</span> */}
         </p>
       </div>
-      <div className="Icon">
-       {getIcon(data.iconId)}
-      </div>
+      <div className="Icon">{getIcon(data.iconId)}</div>
     </div>
   );
 }

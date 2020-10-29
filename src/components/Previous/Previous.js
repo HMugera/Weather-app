@@ -1,7 +1,7 @@
 import React from "react";
 import "./Previous.scss";
 
-import getIcon from "../../getIcon"
+import getIcon from "../../services/getIcon";
 function Previous({ data }) {
   return (
     <div>
@@ -11,42 +11,27 @@ function Previous({ data }) {
         <div className="previous-days">
           <div className="previous-day">
             <div className="day">Day</div>
-            <div className="icon">
-              {" "}
-              {getIcon(data.iconId)}
-            </div>
+            <div className="icon"> {getIcon(data.iconId)}</div>
             <div className="weather">{data.description}</div>
           </div>
           <div className="previous-day">
             <div className="day">Day</div>
-            <div className="icon">
-              {" "}
-              {getIcon(data.iconId)}
-            </div>
+            <div className="icon"> {getIcon(data.iconId)}</div>
             <div className="weather">{data.description}</div>
           </div>
           <div className="previous-day">
             <div className="day">Day</div>
-            <div className="icon">
-              {" "}
-              {getIcon(data.iconId)}
-            </div>
+            <div className="icon"> {getIcon(data.iconId)}</div>
             <div className="weather">{data.description}</div>
           </div>
           <div className="previous-day">
             <div className="day">Day</div>
-            <div className="icon">
-              {" "}
-              {getIcon(data.iconId)}
-            </div>
+            <div className="icon"> {getIcon(data.iconId)}</div>
             <div className="weather">{data.description}</div>
           </div>
           <div className="previous-day">
             <div className="day">Day</div>
-            <div className="icon">
-              {" "}
-              {getIcon(data.iconId)}
-            </div>
+            <div className="icon"> {getIcon(data.iconId)}</div>
             <div className="weather">{data.description}</div>
           </div>
         </div>

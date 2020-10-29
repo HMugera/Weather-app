@@ -15,12 +15,14 @@
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  padding: 40px 30px;
+  padding: 40px 10px;
 }
 
 .previous-day {
   border-right: 3px solid var(--clr-accent);
-  padding-right: 30px;
+  padding-right: 45px;
 }
 
-  .previous-day:nth-child(5) { border-right:none}
+.previous-day:nth-child(5) {
+  border-right: none;
+}

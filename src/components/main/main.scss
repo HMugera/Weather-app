@@ -1,9 +1,8 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5em;
   display: flex;
-  padding: 40px 0;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  grid-gap: 90px;
 }
 
 .date {
@@ -27,12 +26,11 @@
   --border: solid 0.25em var(--clr-accent);
   border-left: var(--border);
   border-right: var(--border);
-  padding: 0 3em;
+  padding: 0 2em;
 }
 
 .Icon {
-  // margin: 20px;
-  --size: 12rem;
+  --size: 8rem;
   width: var(--size);
   height: var(--size);
 }

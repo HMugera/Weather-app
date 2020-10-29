@@ -5,14 +5,14 @@
 }
 
 :root {
-  --fw-light: 300;
-  --fw-normal: 400;
-  --fw-semi: 500;
-  --fw-bold: 700;
-  --fs-h1: 1.8rem;
-  --fs-h2: 2.25rem;
-  --fs-body: 1rem;
-  --fs-xl: 3.8rem;
+  --fw-light: 100;
+  --fw-normal: 200;
+  --fw-semi: 300;
+  --fw-bold: 400;
+  --fs-h1: 1.3rem;
+  --fs-h2: 1.7rem;
+  // --fs-body: 1rem;
+  --fs-xl: 2.7rem;
   --clr-light: #fff;
   --clr-gray: #e2e0e0;
   --clr-dark: #444;
@@ -34,13 +34,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(
-      rgba(204, 204, 204, 0.6),
-      rgba(175, 174, 174, 0.6)
-    ),
-    url("./assets//background.jpg");
-  background-size: cover;
+  line-height: 1.4;
+  background: rgba(39, 39, 39, 0.7);
+  // background: linear-gradient(
+  //     rgba(204, 204, 204, 0.6),
+  //     rgba(175, 174, 174, 0.6)
+  //   ),
+  //   url("./assets//background.jpg");
+  //background-size: cover;
   height: 100vh;
   overflow: hidden;
   color: var(--clr-light);
@@ -53,8 +54,8 @@ h3 {
 }
 
 .loader {
-  border: 12px solid var();
-  border-top: 12px solid var(--clr-dark);
+  border: 8px solid var();
+  border-top: 8px solid var(--clr-light);
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -74,14 +75,15 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 50px;
+  padding: 20px 40px;
 }
 
 .mainWeather {
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  max-width: 1100px;
-  margin: 0px 10px 20px 10px;
+  padding: 10px 25px;
+  min-width: 900px;
+  max-width: 900px;
+  margin: 0px 10px 10px 10px;
   border-radius: 20px;
 
   .section-title {
@@ -93,21 +95,24 @@ h3 {
   .reading {
     font-size: var(--fs-h1);
     margin: 0;
-    padding: 3px;
+    padding: 1px;
     color: var(--clr-gray);
   }
 }
 
 .infoWrapper {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 20px;
+  // display: grid;
+  // grid-template-columns: auto auto auto;
+  // grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .main-title {
   font-size: var(--fs-h1);
   font-weight: var(--fw-light);
-
   color: var(--clr-light);
   letter-spacing: 2px;
 }
