@@ -1,8 +1,8 @@
 import React from "react";
 import "./Previous.scss";
 
-import getIcon from "../../services/getIcon";
-function Previous({ days, weatherForecasts, forecastIcons }) {
+// import getIcon from "../../services/getIcon";
+function Previous() {
   return (
     <div>
       <h1 className='main-title'>Forecast</h1>

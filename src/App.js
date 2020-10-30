@@ -17,8 +17,7 @@ function App() {
   const [isMetric, setMetric] = useState(true);
   const [city, setCity] = useState("");
   const [ifError, setError] = useState(false);
-  console.log(data);
-
+ 
 
   useEffect(() => {
         const fetchFromApi = async () => {

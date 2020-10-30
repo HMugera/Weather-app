@@ -67,10 +67,10 @@ const getIcon = (code) => {
       return <img className="Icon" src={Rain2} alt={Rain2} />;
 
     case 721:
-      return <img className="Icon" src={Rain2} alt={Rain2} />;
+      return <img className="Icon" src={Rain6} alt={Rain6} />;
 
     case 741:
-      return <img className="Icon" src={Rain2} alt={Rain2} />;
+      return <img className="Icon" src={Rain7} alt={Rain7} />;
 
     default:
       return <img className="Icon" src={Cloudy} alt={Cloudy} />;
