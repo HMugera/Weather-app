@@ -5,14 +5,14 @@
 }
 
 :root {
-  --fw-light: 100;
-  --fw-normal: 200;
-  --fw-semi: 300;
-  --fw-bold: 400;
-  --fs-h1: 1.3rem;
-  --fs-h2: 1.7rem;
-  // --fs-body: 1rem;
-  --fs-xl: 2.7rem;
+  --fw-light: 90;
+  --fw-normal: 150;
+  --fw-semi: 250;
+  --fw-bold: 300;
+  --fs-h1: 1.1rem;
+  --fs-h2: 1.5rem;
+   --fs-body: 0.9rem;
+  --fs-xl: 2.5rem;
   --clr-light: #fff;
   --clr-gray: #e2e0e0;
   --clr-dark: #444;
@@ -75,14 +75,14 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 30px;
 }
 
 .mainWeather {
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px 25px;
+  padding: 10px 35px;
   min-width: 900px;
-  max-width: 900px;
+  max-width: 970px;
   margin: 0px 10px 10px 10px;
   border-radius: 20px;
 

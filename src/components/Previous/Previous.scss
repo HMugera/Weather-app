@@ -16,11 +16,13 @@
   justify-content: space-evenly;
   text-align: center;
   padding: 40px 10px;
+  grid-gap:20px;
 }
 
 .previous-day {
   border-right: 3px solid var(--clr-accent);
-  padding-right: 45px;
+  padding-right: 30px;
+  padding-left: 10px;
 }
 
 .previous-day:nth-child(5) {
