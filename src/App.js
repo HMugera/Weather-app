@@ -74,9 +74,7 @@ function App() {
     <div className='App'>
       <Nav />
       <div className='appWrapper'>
-        {loading ? (
-          <div className='loader'></div>
-        ) : (
+        {!loading ?  (
           <>
             <div className='mainWeather'>
               <Search
@@ -92,7 +90,9 @@ function App() {
               <Previous />
             </div>
           </>
-        )}
+        ):(
+          <div className='loader'></div>
+        ) }
       </div>
     </div>
   );
