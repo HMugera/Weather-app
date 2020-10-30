@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.scss";
 
-//helpers to help get date and format temperature
+
 import { formatTemperature, getCurrentDate } from "../../services/helpers";
 import getIcon from "../../services/getIcon";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Previous.scss";
 
-// import getIcon from "../../services/getIcon";
+
 function Previous() {
   return (
     <div>
@@ -20,6 +20,3 @@ function Previous() {
 
 export default Previous;
 
-// {props.monsters.map((monster) => (
-//   <Card  key={monster.id} monster={monster}/>
-//  ))}{" "}
