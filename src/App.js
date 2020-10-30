@@ -9,18 +9,16 @@ import Previous from "./components/Previous/Previous";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=metric&appid=${API_KEY}`;
-// http://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=metric&appid=ee79003171a6dfab7b9d6cb88c078a4f //ee79003171a6dfab7b9d6cb88c078a4f
-// const FORECAST_API = `http://api.openweathermap.org/data/2.5/forecast?q=Eldoret&appid=${API_KEY}`;
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
   const [isMetric, setMetric] = useState(true);
   const [city, setCity] = useState("");
   const [ifError, setError] = useState(false);
- 
 
   useEffect(() => {
-        const fetchFromApi = async () => {
+    const fetchFromApi = async () => {
       const weather = await fetch(API_URL);
       const response = await weather.json();
       let weatherData = {
@@ -74,7 +72,7 @@ function App() {
     <div className='App'>
       <Nav />
       <div className='appWrapper'>
-        {!loading ?  (
+        {!loading ? (
           <>
             <div className='mainWeather'>
               <Search
@@ -90,31 +88,12 @@ function App() {
               <Previous />
             </div>
           </>
-        ):(
+        ) : (
           <div className='loader'></div>
-        ) }
+        )}
       </div>
     </div>
   );
 }
 
 export default App;
-
-
-//   const fetchForecast = async () => {
-  //     const forecastFetch = await fetch(FORECAST_API);
-  //     const response = await forecastFetch.json();
-  //     let forecastData = response;
-
-  //     for (let i = 0; i < forecastData.list.length; i += 8) {
-  //       //  console.log(forecastData.list[i].dt_txt);
-  //       //  console.log(forecastData.list[i].weather[0].description);
-  //       //  console.log(forecastData.list[i].weather[0].id);
-  //       let dara = {
-  //         days: forecastData.list[i].dt_txt,
-  //         icons: forecastData.list[i].weather[0].id,
-  //         weather: forecastData.list[i].weather[0].description,
-  //       };
-  // console.log(dara);
-  //     }   
-  //   };
