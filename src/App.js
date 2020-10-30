@@ -21,8 +21,7 @@ function App() {
 
 
   useEffect(() => {
-      fetchForecast();
-    const fetchFromApi = async () => {
+        const fetchFromApi = async () => {
       const weather = await fetch(API_URL);
       const response = await weather.json();
       let weatherData = {
