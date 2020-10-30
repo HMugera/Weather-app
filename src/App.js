@@ -68,29 +68,28 @@ function App() {
     getWeather();
   };
 
-  return (
-    <div className='App'>
+  return (<div className="App">
       <Nav />
-      <div className='appWrapper'>
-        {loading ?(
-          <div className='loader'></div>
+      <div className="appWrapper">
+        {loading ? (
+          <div className="loader"></div>
         ) : (
           <>
-            <div className='mainWeather'>
+            <div className="mainWeather">
               <Search
                 changeWeather={changeWeather}
                 changeRegion={change}
                 ifError={ifError}
               />
               <Main isMetric={isMetric} data={weather} />
-              <div className='infoWrapper'>
+              <div className="infoWrapper">
                 <Info />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>
               <Previous />
             </div>
           </>
-        )  }
+        )}
       </div>
     </div>
   );
