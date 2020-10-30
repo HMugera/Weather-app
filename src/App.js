@@ -15,33 +15,13 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
   const [isMetric, setMetric] = useState(true);
-  const [data, setDara] = useState();
   const [city, setCity] = useState("");
   const [ifError, setError] = useState(false);
   console.log(data);
 
 
   useEffect(() => {
-  //   const fetchForecast = async () => {
-  //     const forecastFetch = await fetch(FORECAST_API);
-  //     const response = await forecastFetch.json();
-  //     let forecastData = response;
-
-  //     for (let i = 0; i < forecastData.list.length; i += 8) {
-  //       //  console.log(forecastData.list[i].dt_txt);
-  //       //  console.log(forecastData.list[i].weather[0].description);
-  //       //  console.log(forecastData.list[i].weather[0].id);
-  //       let dara = {
-  //         days: forecastData.list[i].dt_txt,
-  //         icons: forecastData.list[i].weather[0].id,
-  //         weather: forecastData.list[i].weather[0].description,
-  //       };
-  // console.log(dara);
-  //     }
-     
-   
-  //   };
-    fetchForecast();
+      fetchForecast();
     const fetchFromApi = async () => {
       const weather = await fetch(API_URL);
       const response = await weather.json();
@@ -121,3 +101,22 @@ function App() {
 }
 
 export default App;
+
+
+//   const fetchForecast = async () => {
+  //     const forecastFetch = await fetch(FORECAST_API);
+  //     const response = await forecastFetch.json();
+  //     let forecastData = response;
+
+  //     for (let i = 0; i < forecastData.list.length; i += 8) {
+  //       //  console.log(forecastData.list[i].dt_txt);
+  //       //  console.log(forecastData.list[i].weather[0].description);
+  //       //  console.log(forecastData.list[i].weather[0].id);
+  //       let dara = {
+  //         days: forecastData.list[i].dt_txt,
+  //         icons: forecastData.list[i].weather[0].id,
+  //         weather: forecastData.list[i].weather[0].description,
+  //       };
+  // console.log(dara);
+  //     }   
+  //   };
