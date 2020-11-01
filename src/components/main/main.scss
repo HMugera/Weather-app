@@ -1,8 +1,9 @@
 .container {
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px 0;
-  grid-gap: 90px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  grid-gap: 10px;
 }
 
 .date {
@@ -13,7 +14,9 @@
   .country {
     font-size: var(--fs-h2);
   }
-
+h1{
+  font-size: var(--fs-h2);
+}
   p {
     font-size: var(--fs-h2);
     margin: 0;
@@ -33,4 +36,5 @@
   --size: 8rem;
   width: var(--size);
   height: var(--size);
+  padding: 0;
 }

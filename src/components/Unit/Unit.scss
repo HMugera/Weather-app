@@ -1,9 +1,9 @@
 .unit {
-  @media (max-width: 900px) {
-    position: absolute;
-    left: 3em;
-    top: 3em;
-  }
+  // @media (max-width: 900px) {
+  //   position: absolute;
+  //   left: 3em;
+  //   top: 3em;
+  // }
   grid-column: 3 / 4;
   place-self: end;
   color: var(--clr-light);

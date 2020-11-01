@@ -4,16 +4,17 @@
 }
 
 input {
-  font-size: 24px;
+  font-size: 23px;
   text-align: center;
   background: transparent;
-  width: 240px;
+  width: 190px;
   color: #fff;
   border: none;
   outline: none;
   padding-bottom: 5px;
   border-bottom: 2px solid var(--clr-accent);
 }
+
 
 .error {
   color: var(--clr-accent);
