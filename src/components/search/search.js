@@ -5,7 +5,7 @@ export default function Search({ getCityWeather, changeLocation, isError }) {
   return (
     <div>
       <div className="search-bar">
-        <form
+        <form 
           className="region"
           onSubmit={(e) => {
             getCityWeather(e);
@@ -13,11 +13,15 @@ export default function Search({ getCityWeather, changeLocation, isError }) {
         >
           <input
             type="text"
-            placeholder="Enter location..."
+        
             onChange={(e) => changeLocation(e.target.value)}
             className="regioninput"
+            autoComplete="off"
             required
           />
+          <label htmlFor="input" className="label">
+            <span className="content-name"><i class="fas fa-search"></i> Search City</span>
+          </label>
           {isError ? <h2 className="error">Location not found!</h2> : <></>}
         </form>
       </div>

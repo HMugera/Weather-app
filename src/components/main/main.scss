@@ -1,9 +1,9 @@
 .container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px 0;
-  grid-gap: 10px;
+  // justify-content: space-between;
+  padding: 30px ;
+  grid-gap: 60px;
+  margin: 0;
 }
 
 .date {
@@ -14,15 +14,14 @@
   .country {
     font-size: var(--fs-h2);
   }
-h1{
-  font-size: var(--fs-h2);
-  font-weight: var(--fw-light);
-}
+  h1 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-light);
+  }
   p {
     font-size: var(--fs-h2);
     margin: 0;
     color: var(--clr-gray);
-  
   }
 }
 
