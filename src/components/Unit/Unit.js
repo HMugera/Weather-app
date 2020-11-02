@@ -3,15 +3,11 @@ import "./Unit.scss";
 
 function Unit({ isMetric, setMetric }) {
   return (
-    //    <div className="unitStyles">
-    //        <label htmlFor="cel">&#176;C</label>
-    //       <button className="toggle">
-    //       </button>
-    //        <label htmlFor="fah">&#176;F</label>
-    //    </div>
+  
     <div className="unit">
       <label htmlFor="cel">&#176;C</label>
       <input type="radio" id="cel" name="unit" defaultChecked />
+      {/* toogle to change temperature units */}
       <button
         className={isMetric ? "input-toggle" : "input-toggle2"}
         onClick={() => setMetric((prev) => !prev)}

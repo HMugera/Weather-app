@@ -1,5 +1,7 @@
 import React from "react";
 import "./Previous.scss";
+import dayjs from "dayjs"
+import getIcon from "../../helpers/getIcon";
 
 function Previous({ forecast }) {
   return (
@@ -13,9 +15,9 @@ function Previous({ forecast }) {
                 return (
                   <>
                     <div className='previous-day'>
-                    <div className='day'>{item.dt_txt}</div>
-                    <div className='icon'>{item.weather[0].id}</div>
-                    <div className='description'>{item.weather[0].main}</div>
+                    <div className='day'>{dayjs(item.dt_txt).format('ddd')}</div>
+                    <div className='icon'>{getIcon(item.weather[0].id)}</div>
+                    <div className='description'>{item.weather[0].description}</div>
                   </div>
                   </>
                 );

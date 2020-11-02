@@ -9,10 +9,10 @@
   --fw-normal: 120;
   --fw-semi: 200;
   --fw-bold: 250;
-  --fs-h1: 18px;
-  --fs-h2: 25px;
-  --fs-body: 8px;
-  --fs-xl: 35px;
+  --fs-h1: 20px;
+  --fs-h2: 28px;
+  --fs-body: 10px;
+  --fs-xl: 38px;
   --clr-light: #fff;
   --clr-gray: #acabab;
   --clr-dark: #444;
@@ -75,14 +75,14 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 18px;
 }
 
 .mainWeather {
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 35px;
-  min-width: 750px;
-  max-width: 780px;
+  min-width: 700px;
+  max-width: 900px;
   margin: 0px 10px 10px 10px;
   border-radius: 20px;
 

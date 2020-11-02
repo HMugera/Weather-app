@@ -5,18 +5,25 @@
 // }
 // .previous-day{
 //   display: flex;
-//  justify-content: space-between;
+//  justify-content: space-evenly;
 //  padding: 0px 20px;
 //  border-bottom: 2px solid var(--clr-accent);
 //  align-items: center;
+// }
+// .previous-day:nth-child(5) {
+//   border-bottom: none;
+// }
+// .icon{
+//   // padding: 0 50px;
+//   align-self: center;
 // }
 
 .previous-days {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  padding: 40px 10px;
-  grid-gap: 20px;
+  padding: 50px 18px;
+  grid-gap: 5px;
 }
 
 .previous-day {
@@ -27,4 +34,8 @@
 
 .previous-day:nth-child(5) {
   border-right: none;
+}
+
+.day{
+  font-size: var(--fs-h1);
 }

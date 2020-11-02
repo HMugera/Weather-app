@@ -1,20 +1,20 @@
 import React from "react";
 import "./search.scss";
 
-export default function Search({ changeWeather, changeRegion, isError }) {
+export default function Search({ getCityWeather, changeLocation, isError }) {
   return (
     <div>
       <div className="search-bar">
         <form
           className="region"
           onSubmit={(e) => {
-            changeWeather(e);
+            getCityWeather(e);
           }}
         >
           <input
             type="text"
             placeholder="Enter location..."
-            onChange={(e) => changeRegion(e.target.value)}
+            onChange={(e) => changeLocation(e.target.value)}
             className="regioninput"
             required
           />
