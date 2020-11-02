@@ -8,48 +8,29 @@ import Unit from "./components/Unit/Unit";
 import Previous from "./components/Previous/Previous";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=metric&appid=${API_KEY}`;
+const API_URL = process.env.REACT_APP_API_URL;
+const URL = `${API_URL}/weather?q=Eldoret&units=metric&appid=${API_KEY}`;
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
+   const [weatherforecast,setForecast] = useState()
   const [isMetric, setMetric] = useState(true);
   const [city, setCity] = useState("");
-  const [ifError, setError] = useState(false);
+  const [isError, setError] = useState(false);
+
 
   useEffect(() => {
-    const fetchFromApi = async () => {
-      const weather = await fetch(API_URL);
-      const response = await weather.json();
-      let weatherData = {
-        location: response.name,
-        temp_max: response.main.temp_max,
-        temp_min: response.main.temp_min,
-        description: response.weather[0].description,
-        country: response.sys.country,
-        wind_speed: response.wind.speed,
-        iconId: response.weather[0].id,
-      };
-      setWeather(weatherData);
-      setLoading(false);
-    };
-
-    fetchFromApi();
+    getWeather();
+    
   }, []);
 
-  const change = (value) => {
-    setCity(value);
-  };
 
-  const changeWeather = (event) => {
-    event.preventDefault();
-    let getWeather = async () => {
-      const api_call = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
-      );
-      if (api_call.ok) {
-        const response = await api_call.json();
-        let weatherData = {
+  const getWeather = () => {
+    fetch( `https://api.openweathermap.org/data/2.5/weather?q=Eldoret&units=metric&appid=${API_KEY}`)
+      .then((res) => res.json())
+      .then((response) => {
+        let data = {
           location: response.name,
           temp_max: response.main.temp_max,
           temp_min: response.main.temp_min,
@@ -58,35 +39,114 @@ function App() {
           wind_speed: response.wind.speed,
           iconId: response.weather[0].id,
         };
-        setWeather(weatherData);
-        setError(false);
-      } else {
-        setError(true);
-        return;
-      }
-    };
-    getWeather();
+        
+        setWeather(data);
+        setLoading(false);
+        return data;
+      })
+      .catch((error) => {
+        alert(error);
+      });
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Eldoret&units=metric&appid=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((response) => {
+  
+          const forecast = [];
+          for(let i=0;i<response.list.length;i+=8){
+            forecast.push(response.list[i+4])
+          }
+          console.log(forecast);
+        
+          setForecast(forecast);
+          setError(false);
+          console.log(forecast);
+        })
+        .catch((error) => {
+          setError(true);
+          alert(error);
+          
+        });
   };
 
-  return (<div className="App">
+  const change = (value) => {
+    setCity(value);
+  };
+
+  const changeWeather = (event) => {
+    event.preventDefault();
+    let getSearchWeather = () => {
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((response) => {
+          let weatherData = {
+            location: response.name,
+            temp_max: response.main.temp_max,
+            temp_min: response.main.temp_min,
+            description: response.weather[0].description,
+            country: response.sys.country,
+            wind_speed: response.wind.speed,
+            iconId: response.weather[0].id,
+          };
+          setWeather(weatherData);
+          setError(false);
+          console.log(weatherData);
+        })
+        .catch((error) => {
+          setError(true);
+          alert(error);
+          return;
+        });
+      
+    };
+    getSearchWeather();
+
+
+    const getForecast = ()=>{
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((response) => {
+  
+          const forecast = [];
+          for(let i=0;i<response.list.length;i+=8){
+            forecast.push(response.list[i+4])
+          }
+          console.log(forecast);
+        
+          setForecast(forecast);
+          setError(false);
+          console.log(forecast);
+        })
+        .catch((error) => {
+          setError(true);
+          alert(error);
+          
+        });
+    }
+    getForecast();
+  };
+  return (
+    <div className='App'>
       <Nav />
-      <div className="appWrapper">
+      <div className='appWrapper'>
         {loading ? (
-          <div className="loader"></div>
+          <div className='loader'></div>
         ) : (
           <>
-            <div className="mainWeather">
+            <div className='mainWeather'>
               <Search
                 changeWeather={changeWeather}
                 changeRegion={change}
-                ifError={ifError}
+                isError={isError}
               />
               <Main isMetric={isMetric} data={weather} />
-              <div className="infoWrapper">
+              <div className='infoWrapper' forecast={weatherforecast}>
                 <Info />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>
-              <Previous />
+              <Previous forecast={weatherforecast}/>
             </div>
           </>
         )}

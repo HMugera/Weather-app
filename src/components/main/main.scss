@@ -16,12 +16,13 @@
   }
 h1{
   font-size: var(--fs-h2);
+  font-weight: var(--fw-light);
 }
   p {
     font-size: var(--fs-h2);
     margin: 0;
     color: var(--clr-gray);
-    font-weight: var(--fw-light);
+  
   }
 }
 
