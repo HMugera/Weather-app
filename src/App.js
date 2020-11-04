@@ -8,8 +8,7 @@ import Unit from "./components/Unit/Unit";
 import Previous from "./components/Previous/Previous";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
- const API_URL = process.env.REACT_APP_API_URL;
-
+const API_URL = process.env.REACT_APP_API_URL;
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,6 +21,7 @@ function App() {
   useEffect(() => {
     getWeather();
     getForecast();
+    setLoading(false);
   }, []);
 
   const getWeather = () => {
@@ -39,16 +39,15 @@ function App() {
           wind_speed: response.wind.speed,
           iconId: response.weather[0].id,
         };
-
         setWeather(data);
-        setLoading(false);
         return data;
       })
       .catch((error) => {
+        setLoading(true)
         alert(error);
       });
   };
- const getForecast = () => {
+  const getForecast = () => {
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=Eldoret&units=metric&appid=${API_KEY}`
     )
@@ -58,11 +57,8 @@ function App() {
         for (let i = 0; i < response.list.length; i += 8) {
           forecast.push(response.list[i + 4]);
         }
-        console.log(forecast);
-
         setForecast(forecast);
         setError(false);
-        console.log(forecast);
       })
       .catch((error) => {
         setError(true);
@@ -97,7 +93,7 @@ function App() {
         })
         .catch((error) => {
           setError(true);
-          // alert(error);
+     
           return;
         });
     };

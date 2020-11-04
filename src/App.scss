@@ -85,6 +85,8 @@ h3 {
   max-width: 1000px;
   margin: 0px 10px 10px 10px;
   border-radius: 20px;
+  max-height:850px;
+
 
   .section-title {
     font-size: var(--fs-h2);
@@ -101,9 +103,6 @@ h3 {
 }
 
 .infoWrapper {
-  // display: grid;
-  // grid-template-columns: auto auto auto;
-  // grid-gap: 10px;
   display: flex;
   justify-content: space-between;
   margin: 0;

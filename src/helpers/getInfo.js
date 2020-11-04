@@ -7,16 +7,16 @@ const getInfo = (code) => {
       return <p>Clear skys perfect time for flying,or rather lets take a walk carry your hat and those sunglasses that make you look cool <span role="img" aria-label="Glasses" ></span>😎</p>;
 
       case 801://few clouds
-      return  <p>We heros alawys have to look clean,its a perfect day to do laudry,let me wash my cape</p>;
+      return  <p>We heros always have to look clean,its a perfect day to do laudry,let me wash my cape</p>;
 
     case 802://scattered clouds
-      return  <p>Flying is hard today with all this love in the air.Call up that special someone lets make it a coffee date <span role="img" aria-label="Coffee">☕️</span> </p>;
+      return  <p>Flying is hard today with all this love in the air. Call up that special someone lets make it a coffee date <span role="img" aria-label="Coffee">☕️</span> </p>;
 
     case 803://broken clounds
       return  <p>Great day for some outside exercise,we have to get fit to keep up with the bad guys <span role="img" aria-label="Hand">💪</span></p>;
       
     case 804://overcast clounds
-      return  <p>Time to watch other heros save the world.Netflix and chill today would be awsome with the pleasant weather outside</p>;
+      return  <p>Time to watch other heros save the world. Netflix and chill today would be awsome with the pleasant weather outside</p>;
 
     case 500://light rain
       return  <p>The kind of weather actors dance around in movies,lets carry that warm sweather just incase</p>;
