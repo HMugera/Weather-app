@@ -44,8 +44,7 @@ function App() {
       })
       .catch((error) => {
         setLoading(true)
-        alert(error);
-      });
+        });
   };
   const getForecast = () => {
     fetch(
@@ -62,7 +61,7 @@ function App() {
       })
       .catch((error) => {
         setError(true);
-        alert(error);
+        
       });
   };
 
@@ -93,8 +92,7 @@ function App() {
         })
         .catch((error) => {
           setError(true);
-     
-          return;
+               return;
         });
     };
     fetchSearchWeather();
