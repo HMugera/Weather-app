@@ -5,14 +5,14 @@
 }
 
 :root {
-  --fw-light: 50;
+  --fw-light: 60;
   --fw-normal: 120;
   --fw-semi: 200;
   --fw-bold: 250;
-  --fs-h1: 20px;
-  --fs-h2: 28px;
-  --fs-body: 10px;
-  --fs-xl: 38px;
+  --fs-h1: 22px;
+  --fs-h2: 30px;
+  --fs-body: 15px;
+  --fs-xl: 40px;
   --clr-light: #fff;
   --clr-gray: #acabab;
   --clr-dark: #444;
@@ -81,8 +81,8 @@ h3 {
 .mainWeather {
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 35px;
-  min-width: 700px;
-  max-width: 900px;
+  min-width: 800px;
+  max-width: 1000px;
   margin: 0px 10px 10px 10px;
   border-radius: 20px;
 

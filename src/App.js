@@ -8,7 +8,7 @@ import Unit from "./components/Unit/Unit";
 import Previous from "./components/Previous/Previous";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-// const API_URL = process.env.REACT_APP_API_URL;
+ const API_URL = process.env.REACT_APP_API_URL;
 
 
 function App() {
@@ -76,7 +76,7 @@ function App() {
 
   const getCityWeather = (event) => {
     event.preventDefault();
-    let getSearchWeather = () => {
+    let fetchSearchWeather = () => {
       fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
       )
@@ -101,7 +101,7 @@ function App() {
           return;
         });
     };
-    getSearchWeather();
+    fetchSearchWeather();
 
     const getSearchForecast = () => {
       fetch(
@@ -140,7 +140,7 @@ function App() {
               />
               <Main isMetric={isMetric} data={weather} />
               <div className='infoWrapper' forecast={weatherforecast}>
-                <Info />
+                <Info data={weather} />
                 <Unit isMetric={isMetric} setMetric={setMetric} />
               </div>
               <Previous forecast={weatherforecast} />

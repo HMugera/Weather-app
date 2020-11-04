@@ -4,25 +4,34 @@ import "./search.scss";
 export default function Search({ getCityWeather, changeLocation, isError }) {
   return (
     <div>
-      <div className="search-bar">
-        <form 
-          className="region"
+      <div className='search-bar'>
+        <form
+          className='region'
           onSubmit={(e) => {
             getCityWeather(e);
           }}
         >
           <input
-            type="text"
-        
+            type='text'
             onChange={(e) => changeLocation(e.target.value)}
-            className="regioninput"
-            autoComplete="off"
+            className='regioninput'
+            autoComplete='off'
             required
           />
-          <label htmlFor="input" className="label">
-            <span className="content-name"><i class="fas fa-search"></i> Search City</span>
+          <label htmlFor='input' className='label'>
+            <span className='content-name'>
+              <i class='fas fa-search'></i> Search City
+            </span>
           </label>
-          {isError ? <h2 className="error">Location not found!</h2> : <></>}
+          {isError ? (
+            <label htmlFor='input' className='label'>
+              <span className='error'>Location not found</span>
+            </label>
+          ) : (
+            <></>
+          )}
+
+          <div></div>
         </form>
       </div>
     </div>

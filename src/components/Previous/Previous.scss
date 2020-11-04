@@ -20,10 +20,10 @@
 
 .previous-days {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
-  padding: 50px 18px;
-  grid-gap: 5px;
+  padding: 50px 0px;
+  grid-gap: 4px;
 }
 
 .previous-day {
@@ -39,25 +39,28 @@
 .day{
   font-size: var(--fs-h1);
 }
+.description{
+  font-size: 21px;
+}
 
-.previous-weather-title,
+// .previous-weather-title,
 //     .previous-day {
 //         animation: slideUpIn 780ms forwards;
 //     }
-.previous-day:nth-child(1) { animation-delay: 100ms}
-    .previous-day:nth-child(2) { animation-delay: 125ms}
-    .previous-day:nth-child(3) { animation-delay: 150ms}
-    .previous-day:nth-child(4) { animation-delay: 175ms}
-    .previous-day:nth-child(5) { animation-delay: 200ms}
+// .previous-day:nth-child(1) { animation-delay: 100ms}
+//     .previous-day:nth-child(2) { animation-delay: 125ms}
+//     .previous-day:nth-child(3) { animation-delay: 150ms}
+//     .previous-day:nth-child(4) { animation-delay: 175ms}
+//     .previous-day:nth-child(5) { animation-delay: 200ms}
 
-@keyframes slideUpIn {
-      0% { 
-          opacity: 0;
-          transform: translateY(50%);
-      }
+// @keyframes slideUpIn {
+//       0% { 
+//           opacity: 0;
+//           transform: translateY(50%);
+//       }
   
-      100% {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
+//       100% {
+//           opacity: 1;
+//           transform: translateY(0);
+//       }
+//   }

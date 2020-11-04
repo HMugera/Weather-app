@@ -10,30 +10,23 @@ form{
 }
 
 input {
-  font-size: 25px;
+  font-size: 26px;
   background: transparent;
   width: 100%;
   color: #fff;
   border: none;
   outline: none;
-  padding-top: 20px;
+  padding-top: 25px;
 
   border-bottom: 3px solid var(--clr-accent);
-}
-
-
-.error {
-  color: var(--clr-accent);
-  font-size: 15px;
 }
 form .label{
   position: absolute;
   bottom: 0px;
-  left: 70%;
+  left: 73%;
   width: 100%;
   height: 100%;
   pointer-events: none;
-
 }
 
 form .label::after{
@@ -41,21 +34,26 @@ form .label::after{
   position: absolute;
   height: 100%;
   width: 100%;
-
-  // border-bottom: 1px solid var(--clr-gray);
-  // transform: translateX(-100%);
-  // transition: transform 0.3s ease;
   }
 
   .content-name{
     position: absolute;
     font-size: 20px;
- 
-    bottom: 5px;
-    left: 90px;
+     bottom: 5px;
+    left: 0;
     transition: all 0.3s ease;
   }
-
+  .error{
+    position: absolute;
+    font-size: 28px;
+     bottom: -30px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: var(--clr-accent);
+    font-size: 15px;
+  
+  }
+ 
   form input:focus + .label .content-name, form input:valid + .label .content-name{
     transform: translateY(-150%);
     font-size: 14px;
@@ -64,3 +62,4 @@ form .label::after{
   form input:focus + .label:after, form input:valid + label:after{
     transform: translateX(0%);
   }
+  
