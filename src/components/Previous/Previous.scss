@@ -36,10 +36,10 @@
   border-right: none;
 }
 
-.day{
+.day {
   font-size: var(--fs-h1);
 }
-.description{
+.description {
   font-size: 21px;
 }
 
@@ -54,11 +54,11 @@
 //     .previous-day:nth-child(5) { animation-delay: 200ms}
 
 // @keyframes slideUpIn {
-//       0% { 
+//       0% {
 //           opacity: 0;
 //           transform: translateY(50%);
 //       }
-  
+
 //       100% {
 //           opacity: 1;
 //           transform: translateY(0);

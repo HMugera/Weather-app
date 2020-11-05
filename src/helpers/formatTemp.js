@@ -1,4 +1,3 @@
-
 export const formatTemperature = (temperature, isMetric) => {
   let returnTemp = temperature;
   if (!isMetric) {
@@ -7,5 +6,3 @@ export const formatTemperature = (temperature, isMetric) => {
   return Math.round(returnTemp);
 };
 // (20°C × 9/5) + 32 = 68°F
-
-

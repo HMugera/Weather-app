@@ -3,7 +3,6 @@ import "./Unit.scss";
 
 function Unit({ isMetric, setMetric }) {
   return (
-  
     <div className="unit">
       <label htmlFor="cel">&#176;C</label>
       <input type="radio" id="cel" name="unit" defaultChecked />

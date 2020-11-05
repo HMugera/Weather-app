@@ -3,10 +3,9 @@
   justify-content: flex-end;
   position: relative;
   width: 100%;
- 
 }
-form{
-  width: 250px; 
+form {
+  width: 250px;
 }
 
 input {
@@ -20,7 +19,7 @@ input {
 
   border-bottom: 3px solid var(--clr-accent);
 }
-form .label{
+form .label {
   position: absolute;
   bottom: 0px;
   left: 73%;
@@ -29,37 +28,37 @@ form .label{
   pointer-events: none;
 }
 
-form .label::after{
+form .label::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  }
+}
 
-  .content-name{
-    position: absolute;
-    font-size: 20px;
-     bottom: 5px;
-    left: 0;
-    transition: all 0.3s ease;
-  }
-  .error{
-    position: absolute;
-    font-size: 28px;
-     bottom: -30px;
-    left: 0;
-    transition: all 0.3s ease;
-    color: var(--clr-accent);
-    font-size: 15px;
-  
-  }
- 
-  form input:focus + .label .content-name, form input:valid + .label .content-name{
-    transform: translateY(-150%);
-    font-size: 14px;
-    color: var(--clr-gray);
-  }
-  form input:focus + .label:after, form input:valid + label:after{
-    transform: translateX(0%);
-  }
-  
+.content-name {
+  position: absolute;
+  font-size: 20px;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.error {
+  position: absolute;
+  font-size: 28px;
+  bottom: -30px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: var(--clr-accent);
+  font-size: 15px;
+}
+
+form input:focus + .label .content-name,
+form input:valid + .label .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: var(--clr-gray);
+}
+form input:focus + .label:after,
+form input:valid + label:after {
+  transform: translateX(0%);
+}
