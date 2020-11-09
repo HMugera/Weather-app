@@ -1,11 +1,11 @@
 import React from "react";
-import "./main.scss";
+import "./CityWeather.scss"
 
-import { formatTemperature } from "../../helpers/formatTemp";
+import { formatTemperature } from "../../helperFunctions/formatTemp";
 import dayjs from "dayjs";
-import getIcon from "../../helpers/getIcon";
+import setIcon from "../../helperFunctions/setIcon";
 
-function Main({ data, isMetric }) {
+function CityWeather({ data, isMetric }) {
   return (
     <div className='container'>
       <div className='date'>
@@ -34,9 +34,9 @@ function Main({ data, isMetric }) {
         
         </p>
       </div>
-      <div className='Icon'>{getIcon(data.iconId)}</div>
+      <div className='Icon'>{setIcon(data.iconId)}</div>
     </div>
   );
 }
 
-export default Main;
+export default CityWeather;

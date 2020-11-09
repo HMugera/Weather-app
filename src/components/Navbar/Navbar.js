@@ -1,7 +1,7 @@
 import React from "react";
-import "./nav.scss";
+import "./Navbar.scss";
 
-function Nav() {
+function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
@@ -12,4 +12,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Navbar;

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Unit.scss";
+import "./toggleFormater.scss"
 
-function Unit({ isMetric, setMetric }) {
+function ToggleFormater({ isMetric, setMetric }) {
   return (
     <div className="unit">
       <label htmlFor="cel">&#176;C</label>
@@ -17,4 +17,4 @@ function Unit({ isMetric, setMetric }) {
   );
 }
 
-export default Unit;
+export default ToggleFormater;

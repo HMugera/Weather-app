@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Search from "./components/search/search";
-import Main from "./components/main/main";
-import Nav from "./components/nav/nav";
-import Info from "./components/Info/info";
-import Unit from "./components/Unit/Unit";
-import Previous from "./components/Previous/Previous";
+import CityWeather from "./components/CityWeather/CityWeather";
+import Navbar from "./components/Navbar/Navbar";
+import Recommendation from "./components/Recommendations/Recommendations";
+import ToggleFormater from "./components/TempFormatter/toggleFomater";
+import Forecast from "./components/Forecast/Forecast";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-// const API_URL = process.env.REACT_APP_API_URL;
+import { getCityForecast, getCityWeather } from "./helperFunctions/fetchData";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -19,82 +19,59 @@ function App() {
   const [isError, setError] = useState(false);
 
   useEffect(() => {
-    fetchSearchWeather(city);
-    getSearchForecast(city);
-    setLoading(false);
-  }, [city]);
+    getCityWeather(city)
+      .then((weatherData) => {
+        setWeather(weatherData);
+        setLoading(false);
+        return
+      })
+      .catch((error) => {
+        setError(true);
+        return
+      });
+
+    getCityForecast(city)
+      .then((forecast) => {
+        setForecast(forecast);
+        setError(false);
+        return
+      })
+      .catch((error) => {
+        setError(true);
+        return
+      });
+  }, [city,isError]);
 
   const onInputChange = (value) => {
     setCity(value);
   };
-  let fetchSearchWeather = (city) => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
-    )
-      .then((res) => res.json())
-      .then((response) => {
-        let weatherData = {
-          location: response.name,
-          temp_max: response.main.temp_max,
-          temp_min: response.main.temp_min,
-          description: response.weather[0].description,
-          country: response.sys.country,
-          wind_speed: response.wind.speed,
-          iconId: response.weather[0].id,
-        };
-        setWeather(weatherData);
-        setError(false);
-        console.log(weatherData);
-      })
-      .catch((error) => {
-        setError(true);
-        return;
-      });
-  };
 
-  const getSearchForecast = (city) => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
-    )
-      .then((res) => res.json())
-      .then((response) => {
-        const forecast = [];
-        for (let i = 0; i < response.list.length; i += 8) {
-          forecast.push(response.list[i + 4]);
-        }
-        setForecast(forecast);
-        setError(false);
-      })
-      .catch((error) => {
-        setError(true);
-      });
-  };
-  const getCityWeather = (event) => {
+  const getSearchWeather = (event) => {
     event.preventDefault();
-    fetchSearchWeather();
-    getSearchForecast();
+    getCityWeather(city);
+     getCityForecast(city);
   };
 
   return (
-    <div className="App">
-      <Nav />
-      <div className="appWrapper">
+    <div className='App'>
+      <Navbar />
+      <div className='appWrapper'>
         {loading ? (
-          <div className="loader"></div>
+          <div className='loader'></div>
         ) : (
           <>
-            <div className="mainWeather">
+            <div className='mainWeather'>
               <Search
-                getCityWeather={getCityWeather}
+                getCityWeather={getSearchWeather}
                 changeLocation={onInputChange}
                 isError={isError}
               />
-              <Main isMetric={isMetric} data={weather} />
-              <div className="infoWrapper" forecast={weatherforecast}>
-                <Info data={weather} />
-                <Unit isMetric={isMetric} setMetric={setMetric} />
+              <CityWeather isMetric={isMetric} data={weather} />
+              <div className='infoWrapper' forecast={weatherforecast}>
+                <Recommendation data={weather} />
+                <ToggleFormater isMetric={isMetric} setMetric={setMetric} />
               </div>
-              <Previous forecast={weatherforecast} />
+              <Forecast forecast={weatherforecast} />
             </div>
           </>
         )}

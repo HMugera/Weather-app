@@ -1,19 +1,19 @@
 import React from "react";
-import "./Previous.scss";
+import "./Forecast.scss";
 import dayjs from "dayjs";
-import getIcon from "../../helpers/getIcon";
+import getIcon from "../../helperFunctions/setIcon";
 
-function Previous({ forecast }) {
+function Forecast({ forecast }) {
   return (
     <div>
       <h1 className='main-title'>Forecast</h1>
 
-      <div className='previousWrapper'>
-        <div className='previous-days'>
+      <div className='forecastWrapper'>
+        <div className='forecast-days'>
           {forecast
             ? forecast.map((item, index) => {
                 return (
-                  <div className='previous-day' key={index}>
+                  <div className='forecast-day' key={index}>
                     <div className='day'>
                       {dayjs(item.dt_txt).format("ddd")}
                     </div>
@@ -25,13 +25,11 @@ function Previous({ forecast }) {
                 );
               })
             : null}
-          {/* <div className='day'>Mon</div>
-            <div className='icon'>icon</div>
-            <div className='description'>sunny</div> */}
+    
         </div>
       </div>
     </div>
   );
 }
 
-export default Previous;
+export default Forecast;
