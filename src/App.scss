@@ -40,7 +40,7 @@ body {
     url("./assets//background.jpg");
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
+
   color: var(--clr-light);
 }
 
@@ -73,15 +73,13 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 70px 18px ;
-  // height: 1000px;
-
 }
 
 .mainWeather {
  background: rgba(0, 0, 0, 0.7);
   padding: 15px 35px ;
   min-width: 700px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0px 10px 10px 10px;
   border-radius: 20px;
 
@@ -114,19 +112,30 @@ h3 {
   letter-spacing: 2px;
 }
 
-// @media(max-width:599px){
-// :root{
-//     --fs-h1: 20px;
-//   --fs-h2: 25px;
-//   --fs-body: 10px;
-//   --fs-xl: 34px;}
-// }
-// .mainWeather{
-//   padding: 10px 10px;
-// }
-// @media(max-width:599px){
+@media (max-width: 500px) {
+  :root {
 
-// }
-// @media(max-width:599px){
-
-// }
+    --fs-h1: 22px;
+    --fs-h2: 20px;
+    --fs-body: 10px;
+    --fs-xl: 40px;}
+.appWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 30px;
+}
+.mainWeather{
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.infoWrapper{
+  padding-top: 0px;
+display: flex;
+flex-direction: column;
+margin: 0px;
+  width: 100vw;
+ padding-left: 120px;
+}
+}

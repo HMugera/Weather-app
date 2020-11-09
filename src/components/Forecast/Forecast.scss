@@ -1,16 +1,17 @@
-.forecast-days {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding: 25px 0px;
-  grid-gap: 4px;
-}
+  .forecast-days {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 0px;
+    grid-gap: 3px;
+  }
+  
+  .forecast-day {
+    border-right: 3px solid var(--clr-accent);
+    padding-right: 30px;
+    padding-left: 10px;
+  }
 
-.forecast-day {
-  border-right: 3px solid var(--clr-accent);
-  padding-right: 30px;
-  padding-left: 10px;
-}
 
 .forecast-day:nth-child(5) {
   border-right: none;
@@ -24,23 +25,66 @@
 }
 
 .forecast-weather-title,
-    .forecast-day {
-        animation: slideUpIn 780ms forwards;
-    }
-.forecast-day:nth-child(1) { animation-delay: 100ms}
-    .forecast-day:nth-child(2) { animation-delay: 125ms}
-    .forecast-day:nth-child(3) { animation-delay: 150ms}
-    .forecast-day:nth-child(4) { animation-delay: 175ms}
-    .forecast-day:nth-child(5) { animation-delay: 200ms}
+.forecast-day {
+  animation: slideUpIn 780ms forwards;
+}
+.forecast-day:nth-child(1) {
+  animation-delay: 100ms;
+}
+.forecast-day:nth-child(2) {
+  animation-delay: 125ms;
+}
+.forecast-day:nth-child(3) {
+  animation-delay: 150ms;
+}
+.forecast-day:nth-child(4) {
+  animation-delay: 175ms;
+}
+.forecast-day:nth-child(5) {
+  animation-delay: 200ms;
+}
 
 @keyframes slideUpIn {
-      0% {
-          opacity: 0;
-          transform: translateY(50%);
-      }
-
-      100% {
-          opacity: 1;
-          transform: translateY(0);
-      }
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
   }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// @media (min-width: 800px) {
+//   .main-title{
+//   padding-left: 260px;
+//   }
+//   .forecast-days {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     border-right: none;
+//   }
+//   .forecast-day {
+//     display: flex;
+//     justify-content: space-evenly;
+//     padding: 0px 120px;
+//     border-bottom: 2px solid var(--clr-accent);
+//     align-items: center;
+//   }
+//   .forecast-day:nth-child(5) {
+//     border-bottom: none;
+//   }
+//   .icon {
+//     // padding: 0 50px;
+//     align-self: center;
+//   }
+//   .day {
+//     font-size: 20px;
+//     padding-left: 20px;
+//   }
+//   .description {
+//     font-size: 18px;
+//   }
+// }

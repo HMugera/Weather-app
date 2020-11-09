@@ -25,11 +25,14 @@
   }
 }
 
-.temp {
+.weather-units {
   --border: solid 0.25em var(--clr-accent);
   border-left: var(--border);
   border-right: var(--border);
   padding: 0 2em;
+}
+.temp{
+  padding-bottom: 20px;
 }
 
 .Icon {
@@ -38,21 +41,30 @@
   height: var(--size);
   padding: 0;
 }
-@media (max-width: 599px) {
+@media (max-width: 500px) {
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-gap: 3px;
+    grid-gap: 1px;
 
-    .temp {
+    .weather-units {
       --border: solid 0.25em var(--clr-accent);
       border-top: var(--border);
       border-bottom: var(--border);
       border-left: none;
       border-right: none;
-      padding: 2em;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      grid-gap: 90px;
     }
+  }
+  .Icon {
+    --size: 6rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
   }
 }
 // @media (min-width: 600px) {
