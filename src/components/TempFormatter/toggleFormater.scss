@@ -1,5 +1,5 @@
 .unit {
-  grid-column: 3 / 4;
+
   place-self: end;
   color: var(--clr-light);
   display: flex;
@@ -72,8 +72,9 @@
   }
 }
 
-@media(max-width:500px){
+@media (max-width: 940px)and(min-width:700) 
+  {
   .unit{
-    padding:10px 120px;
+    // padding:10px 120px;
   }
 }

@@ -6,7 +6,7 @@ import getIcon from "../../helperFunctions/setIcon";
 function Forecast({ forecast }) {
   return (
     <div>
-      <h1 className='main-title'>Forecast</h1>
+      <h1 className='forecast-title'>Forecast</h1>
 
       <div className='forecastWrapper'>
         <div className='forecast-days'>

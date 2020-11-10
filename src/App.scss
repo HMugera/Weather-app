@@ -9,10 +9,7 @@
   --fw-normal: 120;
   --fw-semi: 200;
   --fw-bold: 250;
-  --fs-h1: 22px;
-  --fs-h2: 30px;
-  --fs-body: 15px;
-  --fs-xl: 40px;
+
   --clr-light: #fff;
   --clr-gray: #acabab;
   --clr-dark: #444;
@@ -35,13 +32,13 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.4;
-
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 15, 15, 0.6)),
     url("./assets//background.jpg");
   background-size: cover;
-  height: 100vh;
-
+  background-repeat: no-repeat;
   color: var(--clr-light);
+ height: 100vh;
+
 }
 
 h1,
@@ -69,20 +66,19 @@ h3 {
 }
 
 .appWrapper {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px 18px ;
+  padding: 70px ;
 }
 
 .mainWeather {
- background: rgba(0, 0, 0, 0.7);
-  padding: 15px 35px ;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 35px;
   min-width: 700px;
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0px 10px 10px 10px;
   border-radius: 20px;
-
 
   .section-title {
     font-size: var(--fs-h2);
@@ -112,30 +108,62 @@ h3 {
   letter-spacing: 2px;
 }
 
-@media (max-width: 500px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   :root {
+    --fs-h1: 18px;
+  --fs-h2: 20px;
+  --fs-body: 13px;
+  --fs-xl: 30px;
+  }
+  .App,body{
+    height: 140vh;
+  }
+}
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)and (max-width: 769px) {
+  :root {
+    --fs-h1: 21px;
+  --fs-h2: 26px;
+  --fs-body: 17px;
+  --fs-xl: 34px;
+  }
+  .App,body{
+    height: 130vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  :root {
     --fs-h1: 22px;
-    --fs-h2: 20px;
-    --fs-body: 10px;
-    --fs-xl: 40px;}
-.appWrapper{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 30px;
+  --fs-h2: 28px;
+  --fs-body: 18px;
+  --fs-xl: 35px;
+  }
+  .App,body{
+    height: 120vh;
+  }
 }
-.mainWeather{
-  align-items: center;
-  padding: 0;
-  margin: 0;
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  :root {
+    --fs-h1: 22px;
+  --fs-h2: 30px;
+  --fs-body: 18px;
+  --fs-xl: 40px;
+  }
+
 }
-.infoWrapper{
-  padding-top: 0px;
-display: flex;
-flex-direction: column;
-margin: 0px;
-  width: 100vw;
- padding-left: 120px;
-}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  :root {
+    --fs-h1: 25px;
+    --fs-h2: 35px;
+    --fs-body: 18px;
+    --fs-xl: 45px;
+      }
 }
