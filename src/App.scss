@@ -107,7 +107,29 @@ h3 {
   color: var(--clr-light);
   letter-spacing: 2px;
 }
+@media only screen and (min-width:300px) and (max-width:480px){
+  :root {
+    --fs-h1: 1px;
+  --fs-h2: 15px;
+  --fs-body: 10px;
+  --fs-xl: 20px;
+  }
+  .App,.body{
+    height: 240vh;
+  }
+  .appWrapper{
+    padding-top: 10px;
 
+  }
+  .mainWeather{
+    max-width: 480px;
+    min-width:320px;
+  }
+  .infoWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   :root {

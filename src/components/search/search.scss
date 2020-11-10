@@ -63,19 +63,3 @@ form input:focus + .label:after,
 form input:valid + label:after {
   transform: translateX(0%);
 }
-// @media (max-width: 940px) {
-//   .search-bar {
-//     display: flex;
-//     justify-content: start;
-//     margin-bottom: 10px;
-//     margin-left: 20px;
-//   }
-//   input {
-//     font-size: 22px;
-//   }
-//   form .label {
-//     position: absolute;
-//     bottom: 0px;
-//     left: 3%;
-//   }
-// }

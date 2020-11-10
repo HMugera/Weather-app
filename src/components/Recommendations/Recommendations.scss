@@ -3,6 +3,12 @@
   font-size: var(--fs-h1);
 }
 
+@media only screen and (min-width:300px) and (max-width:480px){
+  .info,p {
+    font-size: 15px;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .info {
@@ -15,5 +21,6 @@
   .info {
     font-size: 22px;
   }
+ 
 }
 

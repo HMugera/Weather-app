@@ -29,15 +29,36 @@
   padding-bottom: 20px;
 }
 
-.Icon {
-  --size: 8rem;
-  width: var(--size);
-  height: var(--size);
-  padding: 0;
+@media only screen and (min-width:300px) and (max-width:480px){
+  .container{
+    padding-top:10px;
+  }
+  .Icon {
+    --size: 4rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+  }
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+  .weather-units{
+    display: flex;
+    flex-direction: row;
+    grid-gap:20px;
+    border-right: none;
+    border-left: none;
+    border-top: 3px solid var(--clr-accent);
+    padding-top: 10px;
+    padding-left: 0;
+  }
+  .Icon {
+    --size: 5rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -45,13 +66,19 @@
   .container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 20px 0px 0px 0px;
+    padding-top: 20px;
     }
     .weather-units{
       border-right: none;
     }
     .temp,.wind{
       padding-left: 20px;
+    }
+    .Icon {
+      --size: 6rem;
+      width: var(--size);
+      height: var(--size);
+      padding: 0;
     }
 }
 
@@ -64,7 +91,12 @@
     grid-gap: 40px;
     margin: 0;
   }
-
+  .Icon {
+    --size: 8rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -75,6 +107,12 @@
     padding: 25px 10px;
     grid-gap: 70px;
     margin: 0;
+  }
+  .Icon {
+    --size: 8rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
   }
 
 }
@@ -87,6 +125,12 @@
     padding: 25px 10px;
     grid-gap: 70px;
     margin: 0;
+  }
+  .Icon {
+    --size: 8rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
   }
 
 }
