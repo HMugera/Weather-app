@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 }
 form {
-  width: 200px;
+  width: 250px;
   position: relative;
 }
 
@@ -64,8 +64,9 @@ form input:valid + label:after {
   transform: translateX(0%);
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (min-width: 999px) {
 .search{
   margin-bottom: 10px;
+  justify-content: flex-start;
 }
 }

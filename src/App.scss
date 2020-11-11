@@ -83,10 +83,11 @@ h3 {
 }
 
 .infoWrapper {
-  align-content: center;
   display: flex;
+  align-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-
+  padding-left: 20px;
  }
 
 .main-title {

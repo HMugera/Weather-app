@@ -1,11 +1,11 @@
 import React from "react";
 import "./CityWeather.scss"
 
-import { formatTemperature } from "../../helperFunctions/formatTemp";
+
 import dayjs from "dayjs";
 import setIcon from "../../helperFunctions/setIcon";
 
-function CityWeather({ data, isMetric }) {
+function CityWeather({ data }) {
   return (
     <div className='container'>
       <div className='townInfo'>
@@ -20,13 +20,13 @@ function CityWeather({ data, isMetric }) {
     <h2 className='section-title'>Temperature</h2>
         <p className='reading'>
           High :
-          <span>{formatTemperature(data.temp_max, isMetric)}</span>°
-          {isMetric ? <span>{`C`}</span> :  <span>{`F`}</span>}
+          <span>{data.temp_max}</span>° C
+        
         </p>
         <p className='reading'>
           Low :
-          <span>{formatTemperature(data.temp_min, isMetric)}</span>°
-          {isMetric ? <span>{`C`}</span> :  <span>{`F`}</span>}
+          <span>{data.temp_min}</span>°
+        
         </p>
     </div>
         <div className="wind">

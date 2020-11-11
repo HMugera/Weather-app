@@ -4,7 +4,6 @@ import Search from "./components/search/search";
 import CityWeather from "./components/CityWeather/CityWeather";
 import Navbar from "./components/Navbar/Navbar";
 import Recommendation from "./components/Recommendations/Recommendations";
-import ToggleFormater from "./components/TempFormatter/toggleFomater";
 import Forecast from "./components/Forecast/Forecast";
 
 import { getCityForecast, getCityWeather } from "./helperFunctions/fetchData";
@@ -13,7 +12,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
   const [weatherforecast, setForecast] = useState();
-  const [isMetric, setMetric] = useState(true);
+
   const [city, setCity] = useState("Eldoret");
   const [isError, setError] = useState(false);
 
@@ -65,11 +64,13 @@ function App() {
               changeLocation={onInputChange}
               isError={isError}
             />
-            <CityWeather isMetric={isMetric} data={weather} />
-            <div className='infoWrapper' forecast={weatherforecast}>
-              <Recommendation data={weather} />
-              <ToggleFormater isMetric={isMetric} setMetric={setMetric} />
-            </div>
+            <CityWeather data={weather} />
+          <div className="infoWrapper">
+          <Recommendation data={weather} />
+          </div>
+           
+            
+           
             <Forecast forecast={weatherforecast} />
           </div>
         </>

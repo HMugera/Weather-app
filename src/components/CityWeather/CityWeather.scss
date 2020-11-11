@@ -41,7 +41,7 @@
 @media only screen and (min-width: 999px) {
   .Icon {
     flex: 2;
-    --size: 8rem;
+    --size: 7rem;
     width: var(--size);
     height: var(--size);
     padding: 0;
@@ -50,7 +50,7 @@
 @media only screen and (max-width: 999px) and (min-width: 369px) {
   .Icon {
     flex: 2;
-    --size: 6rem;
+    --size: 8rem;
     width: var(--size);
     height: var(--size);
     padding: 0;
