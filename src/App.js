@@ -9,7 +9,6 @@ import Forecast from "./components/Forecast/Forecast";
 
 import { getCityForecast, getCityWeather } from "./helperFunctions/fetchData";
 
-
 function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
@@ -23,24 +22,24 @@ function App() {
       .then((weatherData) => {
         setWeather(weatherData);
         setLoading(false);
-        return
+        return;
       })
       .catch((error) => {
         setError(true);
-        return
+        return;
       });
 
     getCityForecast(city)
       .then((forecast) => {
         setForecast(forecast);
         setError(false);
-        return
+        return;
       })
       .catch((error) => {
         setError(true);
-        return
+        return;
       });
-  }, [city,isError]);
+  }, [city, isError]);
 
   const onInputChange = (value) => {
     setCity(value);
@@ -49,33 +48,32 @@ function App() {
   const getSearchWeather = (event) => {
     event.preventDefault();
     getCityWeather(city);
-     getCityForecast(city);
+    getCityForecast(city);
   };
 
   return (
     <div className='App'>
       <Navbar />
-      <div className='appWrapper'>
-        {loading ? (
-          <div className='loader'></div>
-        ) : (
-          <>
-            <div className='mainWeather'>
-              <Search
-                getCityWeather={getSearchWeather}
-                changeLocation={onInputChange}
-                isError={isError}
-              />
-              <CityWeather isMetric={isMetric} data={weather} />
-              <div className='infoWrapper' forecast={weatherforecast}>
-                <Recommendation data={weather} />
-                <ToggleFormater isMetric={isMetric} setMetric={setMetric} />
-              </div>
-              <Forecast forecast={weatherforecast} />
+
+      {loading ? (
+        <div className='loader'></div>
+      ) : (
+        <>
+          <div className='mainWeather'>
+            <Search
+              getCityWeather={getSearchWeather}
+              changeLocation={onInputChange}
+              isError={isError}
+            />
+            <CityWeather isMetric={isMetric} data={weather} />
+            <div className='infoWrapper' forecast={weatherforecast}>
+              <Recommendation data={weather} />
+              <ToggleFormater isMetric={isMetric} setMetric={setMetric} />
             </div>
-          </>
-        )}
-      </div>
+            <Forecast forecast={weatherforecast} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

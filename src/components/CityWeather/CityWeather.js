@@ -8,7 +8,7 @@ import setIcon from "../../helperFunctions/setIcon";
 function CityWeather({ data, isMetric }) {
   return (
     <div className='container'>
-      <div className='date'>
+      <div className='townInfo'>
         <h2>
           {data.location},{data.country}
         </h2>

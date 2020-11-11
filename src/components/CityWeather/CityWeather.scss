@@ -1,6 +1,14 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex: 0 1 auto;
+  text-align: center;
+}
 
-
-.date {
+.townInfo {
+  flex: 2;
+  padding-right: 10px;
   h2 {
     font-size: var(--fs-xl);
     margin: 0;
@@ -20,117 +28,44 @@
 }
 
 .weather-units {
+  flex: 2;
   --border: solid 0.25em var(--clr-accent);
   border-left: var(--border);
   border-right: var(--border);
-  padding: 0 2em;
+  padding: 0px 2em;
 }
 .temp {
   padding-bottom: 20px;
 }
 
-@media only screen and (min-width:300px) and (max-width:480px){
-  .container{
-    padding-top:10px;
-  }
+@media only screen and (min-width: 999px) {
   .Icon {
-    --size: 4rem;
+    flex: 2;
+    --size: 8rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 369px) {
+  .Icon {
+    flex: 2;
+    --size: 6rem;
     width: var(--size);
     height: var(--size);
     padding: 0;
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .weather-units{
-    display: flex;
-    flex-direction: row;
-    grid-gap:20px;
-    border-right: none;
+@media only screen and (max-width: 368px) {
+  .weather-units {
+    flex: 2;
+    --border: solid 0.25em var(--clr-accent);
+    border-top: var(--border);
+    border-bottom: var(--border);
     border-left: none;
-    border-top: 3px solid var(--clr-accent);
-    padding-top: 10px;
-    padding-left: 0;
+    border-right: none;
+    padding: 10px 35px;
+    width: 100%;
   }
-  .Icon {
-    --size: 5rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 769px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding-top: 20px;
-    }
-    .weather-units{
-      border-right: none;
-    }
-    .temp,.wind{
-      padding-left: 20px;
-    }
-    .Icon {
-      --size: 6rem;
-      width: var(--size);
-      height: var(--size);
-      padding: 0;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    padding: 25px 10px;
-    grid-gap: 40px;
-    margin: 0;
-  }
-  .Icon {
-    --size: 8rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    padding: 25px 10px;
-    grid-gap: 70px;
-    margin: 0;
-  }
-  .Icon {
-    --size: 8rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
-  }
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    padding: 25px 10px;
-    grid-gap: 70px;
-    margin: 0;
-  }
-  .Icon {
-    --size: 8rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
-  }
-
 }

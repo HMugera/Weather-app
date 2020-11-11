@@ -1,11 +1,9 @@
 import React from "react";
 import setRecommendation from "../../helperFunctions/setRecommendation";
-import "./Recommendations.scss"
+import "./Recommendations.scss";
 
 const Recommendation = ({ data }) => (
-  <div className="infoWrapper">
-    <div className="info">{setRecommendation(data.iconId)}</div>
-  </div>
+  <div className='info'>{setRecommendation(data.iconId)}</div>
 );
 
 export default Recommendation;

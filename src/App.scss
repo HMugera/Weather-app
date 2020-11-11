@@ -5,11 +5,7 @@
 }
 
 :root {
-  --fw-light: 60;
-  --fw-normal: 120;
-  --fw-semi: 200;
-  --fw-bold: 250;
-
+ 
   --clr-light: #fff;
   --clr-gray: #acabab;
   --clr-dark: #444;
@@ -37,8 +33,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--clr-light);
- height: 100vh;
-
+  height: 100vh;
+  width: 100vw;
 }
 
 h1,
@@ -51,8 +47,9 @@ h3 {
   border: 6px solid var(--clr-accent);
   border-top: 6px solid var(--clr-light);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  margin: 30px;
+  width: 40px;
+  height: 40px;
   animation: spin 1s linear infinite;
 }
 
@@ -65,41 +62,32 @@ h3 {
   }
 }
 
-.appWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 70px ;
-}
-
 .mainWeather {
   background: rgba(0, 0, 0, 0.7);
   padding: 15px 35px;
-  min-width: 700px;
-  max-width: 1150px;
-  margin: 0px 10px 10px 10px;
+  max-width: 1050px;
+  margin: 30px auto;
   border-radius: 20px;
+}
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  margin: 0;
+}
 
-  .section-title {
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
-    margin: 0;
-  }
-
-  .reading {
-    font-size: var(--fs-h1);
-    margin: 0;
-    padding: 1px;
-    color: var(--clr-gray);
-  }
+.reading {
+  font-size: var(--fs-h1);
+  margin: 0;
+  padding: 1px;
+  color: var(--clr-gray);
 }
 
 .infoWrapper {
+  align-content: center;
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
+  flex-wrap: wrap;
+
+ }
 
 .main-title {
   font-size: var(--fs-h1);
@@ -107,85 +95,35 @@ h3 {
   color: var(--clr-light);
   letter-spacing: 2px;
 }
-@media only screen and (min-width:300px) and (max-width:480px){
-  :root {
-    --fs-h1: 1px;
-  --fs-h2: 15px;
-  --fs-body: 10px;
-  --fs-xl: 20px;
-  }
-  .App,.body{
-    height: 240vh;
-  }
-  .appWrapper{
-    padding-top: 10px;
 
-  }
-  .mainWeather{
-    max-width: 480px;
-    min-width:320px;
-  }
-  .infoWrapper{
-    display: flex;
-    flex-direction: column;
-  }
-}
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  :root {
-    --fs-h1: 18px;
-  --fs-h2: 20px;
-  --fs-body: 13px;
-  --fs-xl: 30px;
+@media only screen and (max-width: 999px) {
+  :root{
+    --fw-light: 60;
+    --fw-normal: 120;
+    --fw-semi: 200;
+    --fw-bold: 250;
+    --fs-h1: 20px;
+    --fs-h2: 27px;
+    --fs-body: 15px;
+    --fs-xl: 35px;
   }
   .App,body{
-    height: 140vh;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)and (max-width: 769px) {
-  :root {
-    --fs-h1: 21px;
-  --fs-h2: 26px;
-  --fs-body: 17px;
-  --fs-xl: 34px;
-  }
-  .App,body{
-    height: 130vh;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 991px){
-  :root {
-    --fs-h1: 22px;
-  --fs-h2: 28px;
-  --fs-body: 18px;
-  --fs-xl: 35px;
-  }
-  .App,body{
-    height: 120vh;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  :root {
-    --fs-h1: 22px;
-  --fs-h2: 30px;
-  --fs-body: 18px;
-  --fs-xl: 40px;
-  }
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  :root {
-    --fs-h1: 25px;
-    --fs-h2: 35px;
-    --fs-body: 18px;
-    --fs-xl: 45px;
+    height: 100%;
       }
+      .mainWeather{
+        padding: 5px 35px;
+        margin: 20px auto;
+      }
+}
+@media only screen and (min-width: 999px) {
+   :root{
+    --fw-light: 60;
+    --fw-normal: 120;
+    --fw-semi: 200;
+    --fw-bold: 250;
+    --fs-h1: 22px;
+    --fs-h2: 34px;
+    --fs-body: 18px;
+    --fs-xl: 40px;
+  }
 }
