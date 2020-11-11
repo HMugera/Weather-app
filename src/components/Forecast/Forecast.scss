@@ -1,14 +1,20 @@
 .day {
+  flex: 1;
   font-size: var(--fs-h1);
   align-self: center;
   justify-self: center;
 }
 .description {
+  flex: 1;
   font-size: var(--fs-h1);
+}
+.icon{
+  flex: 2;
 }
 
 .forecast-title {
   font-size: var(--fs-h1);
+  padding-left: 10px;
 }
 .forecast-weather-title,
 .forecast-day {
@@ -74,9 +80,7 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
-
-    flex: 1 1 auto;
+      flex: 1 1 auto;
     border-bottom: 2px solid var(--clr-accent);
   }
   .forecast-day:nth-child(5) {
