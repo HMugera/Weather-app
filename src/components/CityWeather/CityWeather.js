@@ -1,7 +1,6 @@
 import React from "react";
 import "./CityWeather.scss"
 
-
 import dayjs from "dayjs";
 import setIcon from "../../helperFunctions/setIcon";
 
