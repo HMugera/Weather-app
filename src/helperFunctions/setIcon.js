@@ -20,76 +20,77 @@ import Smoke from "../assets/icons/animated/smoke.png";
 const getIcon = (code) => {
   switch (code) {
     case 800:
-      return <img loading="lazy" className="Icon" src={Sun} alt={Sun} />;
+      return <img className="Icon" src={Sun} alt={Sun} />;
 
     case 801: //few clouds
-      return <img loading="lazy" className="Icon" src={Cloudy} alt={Cloudy} />;
+      return <img className="Icon" src={Cloudy} alt={Cloudy} />;
 
     case 802: //scattered clouds
       return (
-        <img loading="lazy" className="Icon" src={Cloudy2} alt={Cloudy2} />
+        <img className="Icon" src={Cloudy2} alt={Cloudy2} />
       );
 
     case 803: //broken clounds
       return (
-        <img loading="lazy" className="Icon" src={Cloudy3} alt={Cloudy3} />
+        <img className="Icon" src={Cloudy3} alt={Cloudy3} />
       );
 
     case 500: //light rain
-      return <img loading="lazy" className="Icon" src={Rain1} alt={Rain1} />;
+      return <img className="Icon" src={Rain1} alt={Rain1} />;
 
     case 501: //moderate rain
-      return <img loading="lazy" className="Icon" src={Rain5} alt={Rain5} />;
+      return <img className="Icon" src={Rain5} alt={Rain5} />;
 
     case 502: //heavy intesity
-      return <img loading="lazy" className="Icon" src={Rain7} alt={Rain7} />;
+      return <img className="Icon" src={Rain7} alt={Rain7} />;
     case 503: // very heavy intesity
-      return <img loading="lazy" className="Icon" src={Rain6} alt={Rain6} />;
+      return <img className="Icon" src={Rain6} alt={Rain6} />;
 
     case 600: //ligth snow
-      return <img loading="lazy" className="Icon" src={Snowy} alt={Snowy} />;
+      return <img className="Icon" src={Snowy} alt={Snowy} />;
 
     case 601: //snow
-      return <img loading="lazy" className="Icon" src={Snowy} alt={Snowy} />;
+      return <img className="Icon" src={Snowy} alt={Snowy} />;
 
     case 602: //heavy snow
-      return <img loading="lazy" className="Icon" src={Snowy} alt={Snowy} />;
+      return <img className="Icon" src={Snowy} alt={Snowy} />;
 
     case 200: //thunderstorm
       return (
-        <img loading="lazy" className="Icon" src={Thunder} alt={Thunder} />
+        <img className="Icon" src={Thunder} alt={Thunder} />
       );
 
     case 201: //thunderstorm
       return (
-        <img loading="lazy" className="Icon" src={Thunder} alt={Thunder} />
+        <img className="Icon" src={Thunder} alt={Thunder} />
       );
 
     case 300: //light intesity drizzle
-      return <img loading="lazy" className="Icon" src={Rain2} alt={Rain2} />;
+      return <img className="Icon" src={Rain2} alt={Rain2} />;
 
     case 301: //drizzle
-      return <img loading="lazy" className="Icon" src={Rain2} alt={Rain2} />;
+      return <img className="Icon" src={Rain2} alt={Rain2} />;
 
     case 302: //heavy intesity drizzle
-      return <img loading="lazy" className="Icon" src={Rain3} alt={Rain3} />;
+      return <img className="Icon" src={Rain3} alt={Rain3} />;
 
     case 701: //mist
-      return <img loading="lazy" className="Icon" src={Mist} alt={Mist} />;
+      return <img className="Icon" src={Mist} alt={Mist} />;
 
     case 711: //smoke
-      return <img loading="lazy" className="Icon" src={Smoke} alt={Smoke} />;
+      return <img className="Icon" src={Smoke} alt={Smoke} />;
 
     case 721: //haze
-      return <img loading="lazy" className="Icon" src={Haze} alt={Haze} />;
+      return <img className="Icon" src={Haze} alt={Haze} />;
 
     case 731: //dust
-      return <img loading="lazy" className="Icon" src={Dust} alt={Dust} />;
+      return <img className="Icon" src={Dust} alt={Dust} />;
     case 741: //fog
-      return <img loading="lazy" className="Icon" src={Fog} alt={Fog} />;
+      return <img className="Icon" src={Fog} alt={Fog} />;
 
     default:
-      return <img loading="lazy" className="Icon" src={Cloudy} alt={Cloudy} />;
+      return <img className="Icon" src={Cloudy} alt={Cloudy} />;
   }
 };
 export default getIcon;
+//loading="lazy"
