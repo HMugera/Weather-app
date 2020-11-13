@@ -8,7 +8,7 @@
   flex: 1;
   font-size: var(--fs-h1);
 }
-.icon{
+.icon {
   flex: 2;
 }
 
@@ -80,7 +80,7 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-      flex: 1 1 auto;
+    flex: 1 1 auto;
     border-bottom: 2px solid var(--clr-accent);
   }
   .forecast-day:nth-child(5) {

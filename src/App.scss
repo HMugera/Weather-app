@@ -5,7 +5,10 @@
 }
 
 :root {
- 
+  --fw-light: 60;
+  --fw-normal: 120;
+  --fw-semi: 200;
+  --fw-bold: 250;
   --clr-light: #fff;
   --clr-gray: #acabab;
   --clr-dark: #444;
@@ -88,7 +91,7 @@ h3 {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 10px;
- }
+}
 
 .main-title {
   font-size: var(--fs-h1);
@@ -98,30 +101,24 @@ h3 {
 }
 
 @media only screen and (max-width: 999px) {
-  :root{
-    --fw-light: 60;
-    --fw-normal: 120;
-    --fw-semi: 200;
-    --fw-bold: 250;
-    --fs-h1: 20px;
+  :root {
+       --fs-h1: 20px;
     --fs-h2: 27px;
     --fs-body: 15px;
     --fs-xl: 35px;
   }
-  .App,body{
+  .App,
+  body {
     height: 100%;
-      }
-      .mainWeather{
-        padding: 5px 35px;
-        margin: 20px auto;
-      }
+  }
+  .mainWeather {
+    padding: 5px 35px;
+    margin: 20px auto;
+  }
 }
 @media only screen and (min-width: 999px) {
-   :root{
-    --fw-light: 60;
-    --fw-normal: 120;
-    --fw-semi: 200;
-    --fw-bold: 250;
+  :root {
+   
     --fs-h1: 22px;
     --fs-h2: 34px;
     --fs-body: 18px;

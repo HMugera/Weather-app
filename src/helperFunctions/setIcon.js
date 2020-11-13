@@ -26,14 +26,10 @@ const getIcon = (code) => {
       return <img className="Icon" src={Cloudy} alt={Cloudy} />;
 
     case 802: //scattered clouds
-      return (
-        <img className="Icon" src={Cloudy2} alt={Cloudy2} />
-      );
+      return <img className="Icon" src={Cloudy2} alt={Cloudy2} />;
 
     case 803: //broken clounds
-      return (
-        <img className="Icon" src={Cloudy3} alt={Cloudy3} />
-      );
+      return <img className="Icon" src={Cloudy3} alt={Cloudy3} />;
 
     case 500: //light rain
       return <img className="Icon" src={Rain1} alt={Rain1} />;
@@ -56,14 +52,10 @@ const getIcon = (code) => {
       return <img className="Icon" src={Snowy} alt={Snowy} />;
 
     case 200: //thunderstorm
-      return (
-        <img className="Icon" src={Thunder} alt={Thunder} />
-      );
+      return <img className="Icon" src={Thunder} alt={Thunder} />;
 
     case 201: //thunderstorm
-      return (
-        <img className="Icon" src={Thunder} alt={Thunder} />
-      );
+      return <img className="Icon" src={Thunder} alt={Thunder} />;
 
     case 300: //light intesity drizzle
       return <img className="Icon" src={Rain2} alt={Rain2} />;

@@ -12,7 +12,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState([]);
   const [weatherforecast, setForecast] = useState();
-
   const [city, setCity] = useState("Eldoret");
   const [isError, setError] = useState(false);
 
@@ -51,26 +50,22 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       <Navbar />
-
       {loading ? (
-        <div className='loader'></div>
+        <div className="loader"></div>
       ) : (
         <>
-          <div className='mainWeather'>
+          <div className="mainWeather">
             <Search
               getCityWeather={getSearchWeather}
               changeLocation={onInputChange}
               isError={isError}
             />
             <CityWeather data={weather} />
-          <div className="infoWrapper">
-          <Recommendation data={weather} />
-          </div>
-           
-            
-           
+            <div className="infoWrapper">
+              <Recommendation data={weather} />
+            </div>
             <Forecast forecast={weatherforecast} />
           </div>
         </>
