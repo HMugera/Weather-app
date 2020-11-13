@@ -1,71 +1,71 @@
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  flex: 0 1 auto;
-  text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	flex: 0 1 auto;
+	text-align: center;
 }
 
 .townInfo {
-  flex: 2;
-  padding-right: 10px;
-  h2 {
-    font-size: var(--fs-xl);
-    margin: 0;
-  }
-  .country {
-    font-size: var(--fs-h2);
-  }
-  h1 {
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-light);
-  }
-  p {
-    font-size: var(--fs-h2);
-    margin: 0;
-    color: var(--clr-gray);
-  }
+	flex: 2;
+	padding-right: 10px;
+	h2 {
+		font-size: var(--fs-xl);
+		margin: 0;
+	}
+	.country {
+		font-size: var(--fs-h2);
+	}
+	h1 {
+		font-size: var(--fs-h2);
+		font-weight: var(--fw-light);
+	}
+	p {
+		font-size: var(--fs-h2);
+		margin: 0;
+		color: var(--clr-gray);
+	}
 }
 
 .weather-units {
-  flex: 2;
-  --border: solid 0.25em var(--clr-accent);
-  border-left: var(--border);
-  border-right: var(--border);
-  padding: 0px 2em;
+	flex: 2;
+	--border: solid 0.25em var(--clr-accent);
+	border-left: var(--border);
+	border-right: var(--border);
+	padding: 0px 2em;
 }
 .temp {
-  padding-bottom: 20px;
+	padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 999px) {
-  .Icon {
-    flex: 2;
-    --size: 7rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
-  }
+	.Icon {
+		flex: 2;
+		--size: 7rem;
+		width: var(--size);
+		height: var(--size);
+		padding: 0;
+	}
 }
 @media only screen and (max-width: 999px) and (min-width: 369px) {
-  .Icon {
-    flex: 2;
-    --size: 8rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
-  }
+	.Icon {
+		flex: 2;
+		--size: 8rem;
+		width: var(--size);
+		height: var(--size);
+		padding: 0;
+	}
 }
 
 @media only screen and (max-width: 368px) {
-  .weather-units {
-    flex: 2;
-    --border: solid 0.25em var(--clr-accent);
-    border-top: var(--border);
-    border-bottom: var(--border);
-    border-left: none;
-    border-right: none;
-    padding: 10px 35px;
-    width: 100%;
-  }
+	.weather-units {
+		flex: 2;
+		--border: solid 0.25em var(--clr-accent);
+		border-top: var(--border);
+		border-bottom: var(--border);
+		border-left: none;
+		border-right: none;
+		padding: 10px 35px;
+		width: 100%;
+	}
 }

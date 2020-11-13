@@ -1,26 +1,26 @@
 .logo {
-  display: flex;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2px 0px 1px 10px;
-  margin-bottom: 0;
-  font-family: "Montserrat", sans-serif;
-  color: var(--clr-accent);
+	display: flex;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 2px 0px 1px 10px;
+	margin-bottom: 0;
+	font-family: "Montserrat", sans-serif;
+	color: var(--clr-accent);
 }
 .navbar h1 {
-  font-size: 18px;
-  padding-top: 8px;
-  font-weight: bolder;
-  font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	padding-top: 8px;
+	font-weight: bolder;
+	font-family: "Montserrat", sans-serif;
 }
 
 .logo-container {
-  height: 80%;
-  width: 50px;
-  padding: 20px;
-  margin-top: 10px;
-  margin-left: 10px;
-  background-image: url("../../assets/logo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+	height: 80%;
+	width: 50px;
+	padding: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-image: url("../../assets/logo.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
