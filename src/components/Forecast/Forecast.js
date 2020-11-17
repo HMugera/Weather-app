@@ -3,10 +3,8 @@ import "./Forecast.scss";
 import dayjs from "dayjs";
 import getIcon from "../../helperFunctions/setIcon";
 
-
 function Forecast({ forecast }) {
-
-	const x ="hughes"
+	const x = "hughes";
 	return (
 		<div>
 			<h1 className="forecast-title">Forecast</h1>

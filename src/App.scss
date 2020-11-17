@@ -32,7 +32,9 @@ body {
 	font-family: "Montserrat", sans-serif;
 	line-height: 1.4;
 	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 15, 15, 0.6)),
-		url("./assets/background.jpg");
+		url("https://i.pinimg.com/originals/27/06/d8/2706d8caba43aa47e0f48e3b2d335224.jpg");
+	background-attachment: fixed;
+	background-size: cover cover;
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: var(--clr-light);
