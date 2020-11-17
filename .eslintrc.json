@@ -1,15 +1,13 @@
 {
-    "extends": ["react-app","plugin:prettier/recommended"],
-  
-    "plugins": [
-    "react"
-    ],
-    "rules": {
-        "no-unused-vars":"warn",
-        "no-console":"off",
-        "func-names":"off",
-        "no-process-exit":"off",
-        "object-shorthand":"off",
-        "class-methods-use-this":"off"
-    }
+	"extends": ["react-app", "plugin:prettier/recommended"],
+
+	"plugins": ["react"],
+	"rules": {
+		"no-unused-vars": "warn",
+		"no-console": "off",
+		"func-names": "off",
+		"no-process-exit": "off",
+		"object-shorthand": "off",
+		"class-methods-use-this": "off"
+	}
 }
