@@ -1,11 +1,10 @@
 {
-    "extends": ["prettier"],
+    "extends": ["react-app","plugin:prettier/recommended"],
   
     "plugins": [
-    "pretiier","react"
+    "react"
     ],
     "rules": {
-        "prettier/prettier":"error",
         "no-unused-vars":"warn",
         "no-console":"off",
         "func-names":"off",
