@@ -18,16 +18,18 @@ function CityWeather({ data }) {
 				<div className="temp">
 					<h2 className="section-title">Temperature</h2>
 					<p className="reading">
-						High :<span>{Math.ceil(data.temp_max)}</span>° C
+						High : &nbsp;{" "}
+						<span className="info">{Math.ceil(data.temp_max)} ° C</span>
 					</p>
 					<p className="reading">
-						Low :<span>{Math.ceil(data.temp_min)}</span>°
+						Low : &nbsp;{" "}
+						<span className="info">{Math.ceil(data.temp_min)} ° C</span>
 					</p>
 				</div>
 				<div className="wind">
 					<h2 className="section-title">Wind</h2>
 					<p className="reading">
-						<span>{Math.ceil(data.wind_speed)}</span>kph
+						<span className="info">{Math.ceil(data.wind_speed)} kph</span>{" "}
 					</p>
 				</div>
 			</div>
