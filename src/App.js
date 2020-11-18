@@ -7,7 +7,7 @@ import Recommendation from "./components/Recommendations/Recommendations";
 import Forecast from "./components/Forecast/Forecast";
 
 import { getCityForecast, getCityWeather } from "./helperFunctions/fetchData";
-
+import { useDebounce } from "./helperFunctions/debounceFn";
 function App() {
 	const [loading, setLoading] = useState(true);
 	const [weather, setWeather] = useState([]);
@@ -39,8 +39,10 @@ function App() {
 			});
 	}, [city, isError]);
 
+	const debouncedSave = useDebounce((value) => setCity(value), 1000);
+
 	const onInputChange = (value) => {
-		setCity(value);
+		debouncedSave(value);
 	};
 
 	const getSearchWeather = (event) => {
