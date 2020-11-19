@@ -51,6 +51,15 @@ form .label::after {
 	color: var(--clr-accent);
 	font-size: 15px;
 }
+.search {
+	position: absolute;
+	font-size: 28px;
+	bottom: -30px;
+	left: 0;
+	transition: all 0.3s ease;
+	color: #fff;
+	font-size: 15px;
+}
 
 form input:focus + .label .content-name,
 form input:valid + .label .content-name {

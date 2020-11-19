@@ -6,7 +6,7 @@ import setIcon from "../../helperFunctions/setIcon";
 
 function CityWeather({ data }) {
 	return (
-		<div className="container">
+		<div className="city-weather">
 			<div className="townInfo">
 				<h2>
 					{data.location},{data.country}
@@ -15,7 +15,7 @@ function CityWeather({ data }) {
 				<h1 className="description">{data.description}</h1>
 			</div>
 			<div className="weather-units">
-				<div className="temp">
+				<div className="tempInfo">
 					<h2 className="section-title">Temperature</h2>
 					<p className="reading">
 						High : &nbsp;{" "}
@@ -26,9 +26,10 @@ function CityWeather({ data }) {
 						<span className="info">{Math.ceil(data.temp_min)} ° C</span>
 					</p>
 				</div>
-				<div className="wind">
+				<div className="windInfo">
 					<h2 className="section-title">Wind</h2>
 					<p className="reading">
+						speed : &nbsp;{" "}
 						<span className="info">{Math.ceil(data.wind_speed)} kph</span>{" "}
 					</p>
 				</div>

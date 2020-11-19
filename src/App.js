@@ -16,6 +16,9 @@ function App() {
 	const [isError, setError] = useState(false);
 
 	useEffect(() => {
+		if (!city) {
+			return;
+		}
 		getCityWeather(city)
 			.then((weatherData) => {
 				setWeather(weatherData);
@@ -39,10 +42,10 @@ function App() {
 			});
 	}, [city, isError]);
 
-	const debouncedSave = useDebounce((value) => setCity(value), 1000);
+	const debouncedSearchTerm = useDebounce((value) => setCity(value), 1000);
 
 	const onInputChange = (value) => {
-		debouncedSave(value);
+		debouncedSearchTerm(value);
 	};
 
 	const getSearchWeather = (event) => {

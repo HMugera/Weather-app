@@ -1,4 +1,4 @@
-.container {
+.city-weather {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
@@ -34,7 +34,7 @@
 	border-right: var(--border);
 	padding: 0px 2em;
 }
-.temp {
+.tempInfo {
 	padding-bottom: 20px;
 }
 .info {

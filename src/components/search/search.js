@@ -13,6 +13,7 @@ export default function Search({ getCityWeather, changeLocation, isError }) {
 				>
 					<input
 						type="text"
+						spellCheck="false"
 						onChange={(e) => {
 							changeLocation(e.target.value);
 						}}
@@ -25,6 +26,7 @@ export default function Search({ getCityWeather, changeLocation, isError }) {
 							<i className="fas fa-search"></i> Search City
 						</span>
 					</label>
+
 					{isError ? (
 						<label htmlFor="input" className="label">
 							<span className="error">Location not found</span>
