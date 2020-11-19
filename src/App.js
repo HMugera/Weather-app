@@ -14,6 +14,7 @@ function App() {
 	const [weatherforecast, setForecast] = useState();
 	const [city, setCity] = useState("Eldoret");
 	const [isError, setError] = useState(false);
+	const [delay, setDelay] = useState(1000);
 
 	useEffect(() => {
 		if (!city) {
@@ -29,7 +30,11 @@ function App() {
 				setError(true);
 				return;
 			});
-
+	}, [city, isError]);
+	useEffect(() => {
+		if (!city) {
+			return;
+		}
 		getCityForecast(city)
 			.then((forecast) => {
 				setForecast(forecast);
@@ -42,7 +47,7 @@ function App() {
 			});
 	}, [city, isError]);
 
-	const debouncedSearchTerm = useDebounce((value) => setCity(value), 1000);
+	const debouncedSearchTerm = useDebounce((value) => setCity(value), delay);
 
 	const onInputChange = (value) => {
 		debouncedSearchTerm(value);
