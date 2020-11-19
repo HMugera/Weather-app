@@ -49,9 +49,7 @@ function App() {
 
 	const debouncedSearchTerm = useDebounce((value) => setCity(value), delay);
 
-	const onInputChange = (value) => {
-		debouncedSearchTerm(value);
-	};
+	const onInputChange = (value) => debouncedSearchTerm(value);
 
 	const getSearchWeather = (event) => {
 		event.preventDefault();
