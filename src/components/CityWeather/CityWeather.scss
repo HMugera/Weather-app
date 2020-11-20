@@ -49,7 +49,7 @@
 }
 
 @media only screen and (min-width: 999px) {
-	.cityIcon {
+	.Icon {
 		flex: 2;
 		--size: 7rem;
 		width: var(--size);
@@ -58,7 +58,7 @@
 	}
 }
 @media only screen and (max-width: 999px) and (min-width: 369px) {
-	.cityIcon {
+	.Icon {
 		flex: 2;
 		--size: 8rem;
 		width: var(--size);

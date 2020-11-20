@@ -35,7 +35,7 @@ function CityWeather({ data }) {
 				</div>
 			</div>
 
-			<div className="cityIcon">{setIcon(data.iconId)}</div>
+			<div className="Icon">{setIcon(data.iconId)}</div>
 		</div>
 	);
 }
