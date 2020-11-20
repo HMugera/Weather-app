@@ -31,6 +31,7 @@ function App() {
 				return;
 			});
 	}, [city, isError]);
+	
 	useEffect(() => {
 		if (!city) {
 			return;
