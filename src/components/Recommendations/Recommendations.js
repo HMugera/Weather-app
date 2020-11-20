@@ -1,5 +1,5 @@
 import React from "react";
-import setRecommendation from "../../helperFunctions/setRecommendation";
+import setRecommendation from "../../utils/setRecommendation";
 import "./Recommendations.scss";
 
 const Recommendation = ({ data }) => (

@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Recommendation from "./components/Recommendations/Recommendations";
 import Forecast from "./components/Forecast/Forecast";
 
-import { getCityForecast, getCityWeather } from "./helperFunctions/fetchData";
-import { useDebounce } from "./helperFunctions/debounceFn";
+import { getCityForecast, getCityWeather } from "./utils/fetchData";
+import { useDebounce } from "./utils/debounceFn";
 function App() {
 	const [loading, setLoading] = useState(true);
 	const [weather, setWeather] = useState([]);

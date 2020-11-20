@@ -33,23 +33,23 @@
 	border-left: var(--border);
 	border-right: var(--border);
 	padding: 0px 2em;
-}
-.tempInfo {
-	padding-bottom: 20px;
-}
-.info {
-	color: #f7f7f7;
-}
 
-.section-title {
-	font-size: var(--fs-h2);
-	font-weight: var(--fw-bold);
-	margin: 0;
-	padding-bottom: 5px;
+	.tempInfo {
+		padding-bottom: 20px;
+	}
+	.info {
+		color: #f7f7f7;
+	}
+	.section-title {
+		font-size: var(--fs-h2);
+		font-weight: var(--fw-bold);
+		margin: 0;
+		padding-bottom: 5px;
+	}
 }
 
 @media only screen and (min-width: 999px) {
-	.Icon {
+	.cityIcon {
 		flex: 2;
 		--size: 7rem;
 		width: var(--size);
@@ -58,7 +58,7 @@
 	}
 }
 @media only screen and (max-width: 999px) and (min-width: 369px) {
-	.Icon {
+	.cityIcon {
 		flex: 2;
 		--size: 8rem;
 		width: var(--size);

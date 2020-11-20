@@ -1,7 +1,7 @@
 import React from "react";
 import "./Forecast.scss";
 import dayjs from "dayjs";
-import getIcon from "../../helperFunctions/setIcon";
+import getIcon from "../../utils/setIcon";
 
 function Forecast({ forecast }) {
 	return (

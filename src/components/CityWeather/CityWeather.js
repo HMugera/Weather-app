@@ -2,7 +2,7 @@ import React from "react";
 import "./CityWeather.scss";
 
 import dayjs from "dayjs";
-import setIcon from "../../helperFunctions/setIcon";
+import setIcon from "../../utils/setIcon";
 
 function CityWeather({ data }) {
 	return (
@@ -35,7 +35,7 @@ function CityWeather({ data }) {
 				</div>
 			</div>
 
-			<div className="Icon">{setIcon(data.iconId)}</div>
+			<div className="cityIcon">{setIcon(data.iconId)}</div>
 		</div>
 	);
 }
