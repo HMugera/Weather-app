@@ -14,7 +14,9 @@
 
 .forecast-title {
 	font-size: var(--fs-h1);
-	padding-left: 10px;
+	padding: 5px;
+	border-bottom: 3px solid var(--clr-accent);
+	width: 110px;
 }
 .forecast-weather-title,
 .forecast-day {
