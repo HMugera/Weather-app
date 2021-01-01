@@ -65,18 +65,20 @@ function App() {
 				<div className="loader"></div>
 			) : (
 				<>
-					<div className="mainWeather">
-						<Search
-							getCityWeather={getSearchWeather}
-							changeLocation={onInputChange}
-							isError={isError}
-						/>
-						<CityWeather data={weather} />
-						<div className="infoWrapper">
-							<Recommendation data={weather} />
+					{weather && (
+						<div className="mainWeather">
+							<Search
+								getCityWeather={getSearchWeather}
+								changeLocation={onInputChange}
+								isError={isError}
+							/>
+							<CityWeather data={weather} />
+							<div className="infoWrapper">
+								<Recommendation data={weather} />
+							</div>
+							<Forecast forecast={weatherforecast} />
 						</div>
-						<Forecast forecast={weatherforecast} />
-					</div>
+					)}
 				</>
 			)}
 		</div>
